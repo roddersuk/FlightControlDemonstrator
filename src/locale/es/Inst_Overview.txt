@@ -1,0 +1,9 @@
+<c>Visión general
+
+Hay tres controles de vuelo principales en un helicóptero:
+
+El joystick que se encuentra frente a usted hace que el helicóptero avance, hacia atrás y hacia los lados, y se conoce como el control CYCLIC PITCH.
+
+La palanca hacia abajo a su izquierda hace que el helicóptero suba y baje y se conoce como el control COLECTIVO PITCH.
+
+Los pedales hacen que el helicóptero gire a la izquierda o a la derecha y se conocen como pedales ANTI-TORQUE.

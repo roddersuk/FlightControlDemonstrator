@@ -1,0 +1,7 @@
+<c>Die ANTI-TORQUE-Pedale
+
+Die Drehung der Hauptrotorblätter würde eine gleiche und entgegengesetzte Kraft erzeugen, die bewirkt, dass sich der Hubschrauberkörper in die entgegengesetzte Richtung dreht, wenn dem nicht entgegengewirkt würde.
+
+In den meisten Hubschraubern wird diese Kraft (oder DREHMOMENT) vom Heckrotor entgegengesetzt.
+
+Die ANTI-TORQUE-Pedale verändern die Neigung der Heckrotorblätter, wodurch diese Gegenkraft kontrolliert werden kann, sodass der Hubschrauber nach links oder rechts drehen kann.

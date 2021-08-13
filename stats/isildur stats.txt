@@ -1,0 +1,391 @@
+Landscape Density 1%
+Performance Stats - Advanced
+events:		0.023246 ms 	1.117920%
+startup:	0.002003 ms 	0.096345%
+calcs:		0.017541 ms 	0.843539%
+text:		0.036381 ms 	1.749603%
+landingpad:	0.203920 ms 	9.806641%
+landscape:	0.467596 ms 	22.486931%
+direction:	0.036322 ms 	1.746733%
+helicopter:	0.416591 ms 	20.034081%
+altimeter:	0.134464 ms 	6.466422%
+artificialhorizon:	0.106568 ms 	5.124913%
+update:	0.634779 ms 	30.526871%
+average 2.079412 ms per frame
+fps: 62.500000
+
+Performance Stats - Basic
+events:	0.044005 ms 	2.363642%
+startup:	0.001779 ms 	0.095567%
+calcs:	0.015546 ms 	0.835019%
+text:	0.038283 ms 	2.056277%
+landingpad:	0.223973 ms 	12.030131%
+landscape:	0.206338 ms 	11.082911%
+direction:	0.000431 ms 	0.023169%
+helicopter:	0.451484 ms 	24.250297%
+altimeter:	0.120159 ms 	6.454024%
+artificialhorizon:	0.000395 ms 	0.021194%
+update:	0.759373 ms 	40.787769%
+average 1.861766 ms per frame
+fps: 62.500000
+
+Performance Stats - advanced no shadow
+events:	0.043986 ms 	2.406691%
+startup:	0.002184 ms 	0.119491%
+calcs:	0.016705 ms 	0.914017%
+text:	0.039654 ms 	2.169669%
+landingpad:	0.230126 ms 	12.591215%
+landscape:	0.465535 ms 	25.471487%
+direction:	0.040174 ms 	2.198099%
+helicopter:	0.327962 ms 	17.944248%
+altimeter:	0.120528 ms 	6.594625%
+artificialhorizon:	0.109215 ms 	5.975634%
+update:	0.431601 ms 	23.614823%
+average 1.827671 ms per frame
+fps: 62.500000
+
+Performance Stats - Basic no shadow
+events:	0.044947 ms 	2.557427%
+startup:	0.001927 ms 	0.109653%
+calcs:	0.016330 ms 	0.929173%
+text:	0.039200 ms 	2.230412%
+landingpad:	0.228771 ms 	13.016779%
+landscape:	0.233413 ms 	13.280903%
+direction:	0.000601 ms 	0.034206%
+helicopter:	0.332964 ms 	18.945206%
+altimeter:	0.126841 ms 	7.217071%
+artificialhorizon:	0.000367 ms 	0.020893%
+update:	0.732148 ms 	41.658277%
+average 1.757510 ms per frame
+fps: 62.111801
+
+Landscape Density 0.5%
+Performance Stats - Basic no shadow (15 of 50)
+events:	0.048101 ms 	3.427648%
+startup:	0.001890 ms 	0.134661%
+calcs:	0.017077 ms 	1.216926%
+text:	0.039063 ms 	2.783593%
+landingpad:	0.217951 ms 	15.531094%
+landscape:	0.177967 ms 	12.681882%
+direction:	0.000495 ms 	0.035284%
+helicopter:	0.339576 ms 	24.198126%
+altimeter:	0.131344 ms 	9.359520%
+artificialhorizon:	0.000401 ms 	0.028562%
+update:	0.429453 ms 	30.602704%
+average 1.403317 ms per frame
+fps: 62.111801
+
+Performance Stats Advanced no shadow (15 of 213)
+events:	0.046694 ms 	2.860704%
+startup:	0.001822 ms 	0.111595%
+calcs:	0.015589 ms 	0.955032%
+text:	0.037185 ms 	2.278111%
+landingpad:	0.212149 ms 	12.997242%
+landscape:	0.300363 ms 	18.401656%
+direction:	0.037372 ms 	2.289554%
+helicopter:	0.319328 ms 	19.563497%
+altimeter:	0.124505 ms 	7.627784%
+artificialhorizon:	0.104880 ms 	6.425467%
+update:	0.432376 ms 	26.489358%
+average 1.632263 ms per frame
+fps: 62.111801
+
+Performance Stats Advanced no shadow (200 of 213)
+events:	0.050234 ms 	1.266730%
+startup:	0.001701 ms 	0.042890%
+calcs:	0.015175 ms 	0.382670%
+text:	0.038214 ms 	0.963621%
+landingpad:	0.220372 ms 	5.556991%
+landscape:	2.648449 ms 	66.784424%
+direction:	0.036051 ms 	0.909083%
+helicopter:	0.310642 ms 	7.833273%
+altimeter:	0.120477 ms 	3.037989%
+artificialhorizon:	0.104488 ms 	2.634805%
+update:	0.419866 ms 	10.587524%
+average 3.965669 ms per frame
+fps: 62.111801
+
+Performance Stats - Advanced no shadow revised algorithm (18 of 213)
+events:	0.046350 ms 	2.572341%
+startup:	0.001751 ms 	0.097154%
+calcs:	0.015684 ms 	0.870458%
+text:	0.035734 ms 	1.983183%
+landingpad:	0.209522 ms 	11.628147%
+landscape:	0.280658 ms 	15.576048%
+direction:	0.037775 ms 	2.096430%
+helicopter:	0.319535 ms 	17.733652%
+altimeter:	0.127833 ms 	7.094519%
+artificialhorizon:	0.105839 ms 	5.873910%
+update:	0.621175 ms 	34.474159%
+average 1.801856 ms per frame
+fps: 61.728394
+
+Performance Stats - Advanced no shadow no landscape items
+events:	0.044318 ms 	2.815869%
+startup:	0.001956 ms 	0.124249%
+calcs:	0.014777 ms 	0.938924%
+text:	0.037989 ms 	2.413728%
+landingpad:	0.217628 ms 	13.827587%
+landscape:	0.257787 ms 	16.379193%
+direction:	0.038479 ms 	2.444883%
+helicopter:	0.334475 ms 	21.251719%
+altimeter:	0.130327 ms 	8.280642%
+artificialhorizon:	0.107014 ms 	6.799387%
+update:	0.389121 ms 	24.723820%
+average 1.573871 ms per frame
+fps: 61.728394
+
+Performance Stats - Advanced no shadow no landscape no image scaling
+events:	0.048658 ms 	3.161173%
+startup:	0.001959 ms 	0.127251%
+calcs:	0.015438 ms 	1.002965%
+text:	0.038698 ms 	2.514121%
+landingpad:	0.223696 ms 	14.533056%
+landscape:	0.198523 ms 	12.897614%
+direction:	0.037334 ms 	2.425482%
+helicopter:	0.322446 ms 	20.948611%
+altimeter:	0.125053 ms 	8.124394%
+artificialhorizon:	0.105666 ms 	6.864900%
+update:	0.421754 ms 	27.400432%
+average 1.539224 ms per frame
+fps: 62.111801
+
+Performance Stats - Advanced no shadow no landscape no image scaling no clear
+events:	0.051491 ms 	3.116198%
+startup:	0.002137 ms 	0.129351%
+calcs:	0.015847 ms 	0.959064%
+text:	0.040348 ms 	2.441863%
+landingpad:	0.220055 ms 	13.317610%
+landscape:	0.186361 ms 	11.278460%
+direction:	0.038460 ms 	2.327568%
+helicopter:	0.334832 ms 	20.263916%
+altimeter:	0.129319 ms 	7.826335%
+artificialhorizon:	0.108610 ms 	6.573031%
+update:	0.524898 ms 	31.766605%
+average 1.652358 ms per frame
+fps: 62.111801
+
+Performance Stats - Advanced no shadow no landscape no image scaling no clear no logging no loop
+events:	0.033028 ms 	2.420183%
+startup:	0.001838 ms 	0.134667%
+calcs:	0.014378 ms 	1.053556%
+text:	0.038360 ms 	2.810869%
+landingpad:	0.242333 ms 	17.757171%
+landscape:	0.004348 ms 	0.318590%
+direction:	0.035747 ms 	2.619424%
+helicopter:	0.330242 ms 	24.198739%
+altimeter:	0.126420 ms 	9.263539%
+artificialhorizon:	0.113053 ms 	8.284079%
+update:	0.424959 ms 	31.139182%
+average 1.364708 ms per frame
+fps: 62.111801
+
+Performance Stats - Advanced no shadow no landscape no image scaling no clear no logging simple loop
+events:	0.035253 ms 	2.669453%
+startup:	0.002008 ms 	0.152070%
+calcs:	0.015503 ms 	1.173913%
+text:	0.037574 ms 	2.845180%
+landingpad:	0.213582 ms 	16.172978%
+landscape:	0.023828 ms 	1.804320%
+direction:	0.035096 ms 	2.657540%
+helicopter:	0.326945 ms 	24.757160%
+altimeter:	0.127843 ms 	9.680617%
+artificialhorizon:	0.108263 ms 	8.197952%
+update:	0.394715 ms 	29.888817%
+average 1.320610 ms per frame
+fps: 62.111801
+
+Performance Stats - Advanced no shadow no landscape no image scaling no clear no logging loop with centre
+events:	0.034051 ms 	2.035675%
+startup:	0.001770 ms 	0.105841%
+calcs:	0.014564 ms 	0.870688%
+text:	0.037481 ms 	2.240717%
+landingpad:	0.234527 ms 	14.020670%
+landscape:	0.079949 ms 	4.779540%
+direction:	0.035209 ms 	2.104895%
+helicopter:	0.312512 ms 	18.682805%
+altimeter:	0.120725 ms 	7.217258%
+artificialhorizon:	0.107142 ms 	6.405248%
+update:	0.694795 ms 	41.536662%
+average 1.672726 ms per frame
+fps: 62.111801
+
+Performance Stats - Advanced no shadow no clear no image scaling
+events:	0.039997 ms 	2.252244%
+startup:	0.001866 ms 	0.105101%
+calcs:	0.016445 ms 	0.926047%
+text:	0.038526 ms 	2.169447%
+landingpad:	0.212077 ms 	11.942210%
+landscape:	0.232185 ms 	13.074479%
+direction:	0.036812 ms 	2.072912%
+helicopter:	0.329305 ms 	18.543357%
+altimeter:	0.130992 ms 	7.376255%
+artificialhorizon:	0.108604 ms 	6.115546%
+update:	0.629054 ms 	35.422403%
+average 1.775865 ms per frame
+fps: 62.111801
+
+Performance Stats - Advanced no shadow no clear
+events:	0.036342 ms 	2.363120%
+startup:	0.001946 ms 	0.126526%
+calcs:	0.016172 ms 	1.051613%
+text:	0.035998 ms 	2.340795%
+landingpad:	0.194343 ms 	12.637105%
+landscape:	0.187741 ms 	12.207818%
+direction:	0.033954 ms 	2.207868%
+helicopter:	0.315358 ms 	20.506103%
+altimeter:	0.127953 ms 	8.320109%
+artificialhorizon:	0.106613 ms 	6.932487%
+update:	0.481453 ms 	31.306455%
+average 1.537872 ms per frame
+fps: 61.728394
+
+Performance Stats - Advanced no shadow no logging scaling out of loop
+events:	0.044156 ms 	2.816164%
+startup:	0.002002 ms 	0.127702%
+calcs:	0.015301 ms 	0.975848%
+text:	0.039298 ms 	2.506294%
+landingpad:	0.225544 ms 	14.384545%
+landscape:	0.221806 ms 	14.146151%
+direction:	0.034828 ms 	2.221231%
+helicopter:	0.320865 ms 	20.463893%
+altimeter:	0.120921 ms 	7.711982%
+artificialhorizon:	0.106317 ms 	6.780592%
+update:	0.436921 ms 	27.865598%
+average 1.567958 ms per frame
+fps: 62.500000
+
+Performance Stats - Advanced no shadow no logging 1% scale increment
+events:	0.022101 ms 	1.348493%
+startup:	0.002342 ms 	0.142910%
+calcs:	0.016272 ms 	0.992845%
+text:	0.033222 ms 	2.027081%
+landingpad:	0.180066 ms 	10.986833%
+landscape:	0.195746 ms 	11.943554%
+direction:	0.031986 ms 	1.951661%
+helicopter:	0.302355 ms 	18.448356%
+altimeter:	0.139766 ms 	8.527877%
+artificialhorizon:	0.100552 ms 	6.135237%
+update:	0.614518 ms 	37.495154%
+average 1.638928 ms per frame
+fps: 62.111801
+
+Performance Stats - Advanced no shadow no logging 1% scale increment - no scaling if same scale
+events:	0.031288 ms 	1.979361%
+startup:	0.001854 ms 	0.117271%
+calcs:	0.015092 ms 	0.954742%
+text:	0.034964 ms 	2.211908%
+landingpad:	0.196155 ms 	12.409313%
+landscape:	0.138360 ms 	8.753052%
+direction:	0.031846 ms 	2.014692%
+helicopter:	0.301967 ms 	19.103263%
+altimeter:	0.117634 ms 	7.441837%
+artificialhorizon:	0.103023 ms 	6.517541%
+update:	0.608526 ms 	38.497019%
+average 1.580709 ms per frame
+fps: 62.500000
+
+Performance Stats - advanced 5% scale pad and landscape
+events:	0.028540 ms 	1.995276%
+startup:	0.001954 ms 	0.136630%
+calcs:	0.015001 ms 	1.048724%
+text:	0.035603 ms 	2.489017%
+landingpad:	0.129809 ms 	9.074989%
+landscape:	0.130393 ms 	9.115842%
+direction:	0.035645 ms 	2.491969%
+helicopter:	0.308098 ms 	21.539262%
+altimeter:	0.124856 ms 	8.728720%
+artificialhorizon:	0.108715 ms 	7.600297%
+update:	0.511787 ms 	35.779274%
+average 1.430400 ms per frame
+fps: 61.728394
+
+Performance Stats Advanced 5% scale landscape 2% scale pad
+events:	0.033732 ms 	2.439275%
+startup:	0.001818 ms 	0.131490%
+calcs:	0.015656 ms 	1.132128%
+text:	0.037570 ms 	2.716782%
+landingpad:	0.142065 ms 	10.273162%
+landscape:	0.140052 ms 	10.127584%
+direction:	0.037725 ms 	2.728026%
+helicopter:	0.328016 ms 	23.719871%
+altimeter:	0.126845 ms 	9.172543%
+artificialhorizon:	0.112278 ms 	8.119200%
+update:	0.407117 ms 	29.439938%
+average 1.382875 ms per frame
+fps: 62.500000
+
+Performance Stats - 1% pad 5% landscape
+events:	0.028144 ms 	2.178486%
+startup:	0.001840 ms 	0.142451%
+calcs:	0.014744 ms 	1.141267%
+text:	0.034731 ms 	2.688401%
+landingpad:	0.126029 ms 	9.755331%
+landscape:	0.122830 ms 	9.507718%
+direction:	0.036144 ms 	2.797780%
+helicopter:	0.306577 ms 	23.730751%
+altimeter:	0.123837 ms 	9.585636%
+artificialhorizon:	0.104597 ms 	8.096379%
+update:	0.392424 ms 	30.375800%
+average 1.291897 ms per frame
+fps: 61.349693
+
+Performance Stats - 1% pad and landscape scale
+events:	0.027931 ms 	2.103876%
+startup:	0.001643 ms 	0.123772%
+calcs:	0.015246 ms 	1.148384%
+text:	0.036616 ms 	2.758046%
+landingpad:	0.137879 ms 	10.385575%
+landscape:	0.129898 ms 	9.784409%
+direction:	0.035285 ms 	2.657783%
+helicopter:	0.307165 ms 	23.136918%
+altimeter:	0.124909 ms 	9.408659%
+artificialhorizon:	0.105080 ms 	7.915086%
+update:	0.405946 ms 	30.577493%
+average 1.327598 ms per frame
+fps: 62.500000
+
+Performance Stats - 5% helicopter rotation (straight up)
+events:	0.028371 ms 	1.717850%
+startup:	0.001684 ms 	0.101990%
+calcs:	0.015868 ms 	0.960809%
+text:	0.035881 ms 	2.172563%
+landingpad:	0.149143 ms 	9.030535%
+landscape:	0.143220 ms 	8.671893%
+direction:	0.037623 ms 	2.278051%
+helicopter:	0.168675 ms 	10.213222%
+altimeter:	0.118149 ms 	7.153869%
+artificialhorizon:	0.111969 ms 	6.779713%
+update:	0.840955 ms 	50.919506%
+average 1.651537 ms per frame
+fps: 62.111801
+
+Performance Stats - 5% heli rotation (up and spin)
+events:	0.023248 ms 	1.679073%
+startup:	0.001682 ms 	0.121461%
+calcs:	0.017557 ms 	1.268057%
+text:	0.034314 ms 	2.478290%
+landingpad:	0.158736 ms 	11.464465%
+landscape:	0.119060 ms 	8.598931%
+direction:	0.035728 ms 	2.580388%
+helicopter:	0.288978 ms 	20.871029%
+altimeter:	0.124073 ms 	8.960986%
+artificialhorizon:	0.101717 ms 	7.346367%
+update:	0.479496 ms 	34.630953%
+average 1.384589 ms per frame
+fps: 62.500000
+
+Performance Stats - landscape density 2% (from 0.5%)
+events:	0.026013 ms 	1.520775%
+startup:	0.002062 ms 	0.120548%
+calcs:	0.014573 ms 	0.851971%
+text:	0.033923 ms 	1.983253%
+landingpad:	0.131414 ms 	7.682862%
+landscape:	0.543237 ms 	31.759411%
+direction:	0.036836 ms 	2.153554%
+helicopter:	0.160406 ms 	9.377850%
+altimeter:	0.118899 ms 	6.951199%
+artificialhorizon:	0.103404 ms 	6.045338%
+update:	0.539711 ms 	31.553240%
+average 1.710477 ms per frame
+fps: 62.111801

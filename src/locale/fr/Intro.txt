@@ -1,0 +1,6 @@
+<c>Introduction
+
+Cet appareil de démonstration des commandes de vol est conçu pour montrer le fonctionnement des commandes de vol principales de l'hélicoptère.
+
+Il utilise la boîte de vitesses, la tête de rotor, le rotor de queue et les pédales d'un hélicoptère Agusta Bell 47 et d'un manche cyclique d'un Westland 30.
+Tous montés dans un cadre Dexion avec des liaisons de contrôle personnalisées.

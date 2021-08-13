@@ -1,0 +1,7 @@
+<c>The ANTI-TORQUE pedals
+
+The rotation of the main rotor blades would generate an equal and opposite force causing the helicopter body to rotate in the opposite direction if this were not counteracted.
+
+In most helicopters, this force (or TORQUE), is opposed by the tail rotor.
+
+The ANTI-TORQUE pedals alter the pitch of the tail rotor blades allowing this opposing force to be controlled, enabling the helicopter to spin to the left or right.

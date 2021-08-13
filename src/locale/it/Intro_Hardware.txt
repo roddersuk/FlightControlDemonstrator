@@ -1,0 +1,5 @@
+<c>Hardware
+
+Le posizioni dei controlli vengono lette dai potenziometri tramite ingranaggi stampati in 3D per trasformare il movimento lineare in movimento rotatorio.
+
+I segnali dei potenziometri vengono inseriti in una scheda di interfaccia personalizzata che li converte in segnali digitali per essere elaborati da un computer Raspberry Pi Zero.

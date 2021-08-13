@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-05-30 16:03+0100\n"
+"PO-Revision-Date: 2020-05-30 16:14+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: FCD.py:47 FCD.py:153
+msgid "Flight Controls Demonstrator"
+msgstr "Dimostratore di Controlli di Volo"
+
+#: FCD.py:68
+msgid "Introduction"
+msgstr "Introduzione"
+
+#: FCD.py:69
+msgid "How Do the Flight Controls Work on a Helicopter?"
+msgstr "Come funzionano i controlli di volo su un elicottero?"
+
+#: FCD.py:70
+msgid "Try Out the Flight Controls and See How They Affect the Rotor Blades"
+msgstr "Prova i controlli di volo e scopri come influenzano le pale del rotore"
+
+#: FCD.py:71
+msgid "Simple Flight Simulator"
+msgstr "Simulatore di volo semplice"
+
+#: FCD.py:72
+msgid "Advanced Flight Simulator"
+msgstr "Simulatore di volo avanzato"
+
+#: FCD.py:73
+msgid "About"
+msgstr "Circa"
+
+#: FCD.py:126
+msgid "Welcome to the"
+msgstr "Benvenuto al"
+
+#: FCD.py:129
+msgid "Flight Controls"
+msgstr "Dimostratore di"
+
+#: FCD.py:132
+msgid "Demonstrator"
+msgstr "Controlli di Volo"
+
+#: FCD.py:154
+msgid "Developed by Rod Thomas"
+msgstr "Sviluppato da Rod Thomas"
+
+#: FCD.py:155
+msgid "for The Helicopter Museum"
+msgstr "per il Museo di elicottero"
+
+#: FCD.py:156
+msgid "2020"
+msgstr "2020"
+
+#: FCD.py:297
+msgid "Do you want the blades to rotate?"
+msgstr "Vuoi che le lame ruotino?"
+
+#: FCD.py:301
+msgid "COLLECTIVE"
+msgstr "COLLETTIVO"
+
+#: FCD.py:302
+msgid "CYCLIC LONG"
+msgstr "CICLICO LONG"
+
+#: FCD.py:303
+msgid "CYCLIC LAT"
+msgstr "CICLICO LAT"
+
+#: FCD.py:304
+msgid "RUDDER PEDAL"
+msgstr "PEDALE DEL TIMONE"
+
+#: FCD.py:333
+msgid "Watch how the blade angle changes as you move the controls."
+msgstr "Guarda come cambia l'angolo della lama mentre muovi i controlli."
+
+#: FCD.py:340
+msgid "The movement is exaggerated for the purposes of illustration."
+msgstr "Il movimento è esagerato ai fini dell'illustrazione."
+
+#: i18n.py:101
+msgid "Missing file"
+msgstr "File mancante"
+
+#: i18n.py:101
+msgid "for language"
+msgstr "per la lingua"
+
+#: mmi.py:370
+msgid "Yes"
+msgstr "Sì"
+
+#: mmi.py:373
+msgid "No"
+msgstr "No"
+
+#: simulator.py:139
+msgid "On the ground"
+msgstr "Per terra"
+
+#: simulator.py:164
+msgid ""
+"Centre the cyclic, lower the collective and then press the button to start "
+"the engine.\n"
+"Try to take off, fly around and land back on the pad."
+msgstr ""
+"Centrare il ciclico, abbassare il collettivo e quindi premere il pulsante "
+"per avviare il motore.\n"
+"Prova a decollare, vola in volo e atterra sul tappetino."
+
+#: simulator.py:172
+msgid ""
+"\n"
+"The direction arrow at the top of the screen indicates where to find the "
+"landing pad."
+msgstr ""
+"\n"
+"La freccia direzionale nella parte superiore dello schermo indica dove "
+"trovare il pad di atterraggio."
+
+#: simulator.py:208
+msgid "Starting up"
+msgstr "Cominciando"
+
+#: simulator.py:216
+msgid "Running"
+msgstr "In esecuzione"
+
+#: simulator.py:243
+msgid "Flying"
+msgstr "Volante"
+
+#: simulator.py:256
+msgid "Landed OK"
+msgstr "Atterrato OK"
+
+#: simulator.py:262
+msgid "Oh dear, I'm afraid you crash landed!"
+msgstr "Oh, cara, temo che tu sia caduto a terra!"
+
+#: simulator.py:264
+msgid "Missed the landing pad"
+msgstr "Manca il pad di atterraggio"
+
+#: simulator.py:266
+msgid "You landed OK but you missed the landing pad"
+msgstr "Hai atterrato OK ma hai perso il pad di atterraggio"
+
+#: simulator.py:268
+msgid ""
+"That was a heavy landing,\n"
+"and you missed the landing pad!"
+msgstr ""
+"Quello era un atterraggio pesante,\n"
+"e ti sei perso il pad di atterraggio!"
+
+#: simulator.py:271
+msgid ""
+"Well done!\n"
+"You landed safely back on the landing pad"
+msgstr ""
+"Molto bene!\n"
+"Sei atterrato sicuro sul pianerottolo"
+
+#: simulator.py:273
+msgid ""
+"You landed back on the pad\n"
+"but it was quite a heavy landing"
+msgstr ""
+"Sei atterrato sul tappetino\n"
+"ma era un atterraggio piuttosto pesante"
+
+#~ msgid "2019"
+#~ msgstr "2019"
+
+#~ msgid "Agusta Bell 47"
+#~ msgstr "Agusta Bell 47"

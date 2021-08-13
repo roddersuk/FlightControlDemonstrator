@@ -1,0 +1,11 @@
+<c>Le contrôle CYCLIC PITCH
+
+Le fonctionnement du joystick est un peu plus compliqué.
+
+En déplaçant la manette de commande dans une direction particulière, le pas des pales du rotor principal est réduit lorsque celles-ci passent à côté de cette position et augmenté lorsque celles-ci ont tourné de 180 degrés.
+
+L’hélicoptère s’incline dans la direction du mouvement en raison de la portance réduite dans cette direction (et de la portance accrue dans la direction opposée).
+
+Lorsque l'hélicoptère est incliné, la poussée (soulèvement) du rotor principal s'éloigne de la position de la manette de commande, ce qui fait que l'aéronef se déplace dans la même direction que la manette de commande.
+
+La commande est connue sous le nom de commande CYCLIC PITCH car le pas des pales du rotor change constamment car elles tournent de manière cyclique.

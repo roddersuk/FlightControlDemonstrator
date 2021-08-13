@@ -1,0 +1,6 @@
+<c>Introducción
+
+Esta es la plataforma de demostración de control de vuelo y está diseñada para mostrar cómo funcionan los controles de vuelo del helicóptero principal.
+
+Utiliza la caja de cambios, la cabeza del rotor, el rotor de cola y los pedales de un helicóptero Agusta Bell 47 y una palanca cíclica de un Westland 30.
+Todo montado en un marco Dexion con enlaces de control personalizados.

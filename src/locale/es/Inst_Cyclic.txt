@@ -1,0 +1,11 @@
+<c>El control CYCLIC PITCH
+
+El funcionamiento del joystick es algo más complicado.
+
+Al mover el joystick en una dirección particular, el paso de las palas del rotor principal se reduce cuando pasan por esa posición y se incrementa cuando han girado 180 grados.
+
+Esto hace que el helicóptero se incline en la dirección del movimiento debido a la reducción de la elevación en esa dirección (y el aumento de la elevación en la dirección opuesta).
+
+Cuando el helicóptero se inclina, el empuje (elevación) del rotor principal se aleja de la posición del joystick, lo que hace que el avión se mueva en la misma dirección que el joystick.
+
+El control se conoce como el control PITCH CÍCLICO porque el paso de las palas del rotor cambia constantemente a medida que giran de manera cíclica.

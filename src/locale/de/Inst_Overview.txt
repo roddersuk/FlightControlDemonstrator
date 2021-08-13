@@ -1,0 +1,9 @@
+<c>Überblick
+
+In einem Hubschrauber gibt es drei Hauptkontrollen:
+
+Der Joystick vor Ihnen lässt den Hubschrauber vorwärts, rückwärts und seitwärts fahren und wird als CYCLIC PITCH-Steuerung bezeichnet.
+
+Wenn Sie den Hebel nach links unten bewegen, wird der Hubschrauber nach oben und unten bewegt und ist als COLLECTIVE PITCH-Regler bekannt.
+
+Die Fußpedale lässt den Hubschrauber nach links oder rechts drehen und wird als ANTI-TORQUE-Pedale bezeichnet.

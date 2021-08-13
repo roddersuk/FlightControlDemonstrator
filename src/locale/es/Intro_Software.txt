@@ -1,0 +1,3 @@
+<c>Software
+
+Este programa se escribe usando el lenguaje Python, usando la biblioteca gpiozero para obtener las entradas de los controles y la biblioteca pygame para producir los gráficos en la pantalla.

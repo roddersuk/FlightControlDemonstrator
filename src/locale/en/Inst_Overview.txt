@@ -1,0 +1,9 @@
+<c>Overview
+
+There are three principal flight controls in a helicopter:
+
+The joystick in front of you makes the helicopter go forwards, backwards and sideways and is known as the CYCLIC PITCH control.
+
+The lever down to your left makes the helicopter go up and down and is known as the COLLECTIVE PITCH control.
+
+The foot pedals make the helicopter spin left or right and are known as the ANTI-TORQUE pedals.

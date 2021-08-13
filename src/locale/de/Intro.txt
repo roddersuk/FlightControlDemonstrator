@@ -1,0 +1,6 @@
+<c>Einführung
+
+Dies ist das Steuerelement Flugdemonstrator Rig und soll zeigen, wie die wichtigsten Helikopterflug Arbeit steuert.
+ 
+Es nutzt die Getriebe, Rotorkopf, tail Rotor und Fuß-Pedale aus einem Helikopter Agusta Bell 47 und einem zyklischen Stock aus einem Westland 30.
+Alle in einem Dexion-Rahmen mit benutzerdefinierten Steuerelements Gestänge montiert.

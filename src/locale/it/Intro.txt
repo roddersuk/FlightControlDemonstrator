@@ -1,0 +1,6 @@
+<c>Introduzione
+
+Questo è il rig di Flight Control Demonstrator ed è progettato per mostrare come funzionano i principali controlli di volo in elicottero.
+
+Usa il cambio, la testa del rotore, il rotore di coda ei pedali da un elicottero Agusta Bell 47 e un bastone ciclico da un Westland 30.
+Tutto montato su un telaio Dexion con collegamenti di controllo personalizzati.

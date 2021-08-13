@@ -1,0 +1,7 @@
+<c>La commande COLLECTIVE PITCH
+
+Lorsque vous augmentez la commande COLLECTIVE PITCH, le tangage ou l'angle d'attaque des pales du rotor principal augmente.
+
+Cela augmente la portance générée par le rotor principal jusqu'à ce que cela soit suffisant pour soulever l'hélicoptère du sol.
+
+On l’appelle la commande COLLECTIVE PITCH car le pas de toutes les pales du rotor est augmenté collectivement, c’est-à-dire du même montant.

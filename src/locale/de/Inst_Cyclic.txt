@@ -1,0 +1,11 @@
+<c>Die CYCLIC PITCH-Steuerung
+
+Die Funktionsweise des Joysticks ist etwas komplizierter.
+
+Durch Bewegen des Joysticks in eine bestimmte Richtung wird die Neigung der Hauptrotorblätter verringert, wenn sie an dieser Position vorbeilaufen, und erhöht, wenn sie sich um 180 Grad gedreht haben.
+
+Dies führt dazu, dass der Hubschrauber aufgrund des reduzierten Auftriebs in dieser Richtung (und des erhöhten Auftriebs in die entgegengesetzte Richtung) in Bewegungsrichtung kippt.
+
+Wenn sich der Hubschrauber neigt, wird der Schub (Hub) des Hauptrotors von der Joystickposition weggerichtet, wodurch das Flugzeug in dieselbe Richtung wie der Joystick bewegt wird.
+
+Die Steuerung ist als CYCLIC PITCH-Steuerung bekannt, da sich die Steigung der Rotorblätter ständig ändert, wenn sie sich zyklisch drehen.

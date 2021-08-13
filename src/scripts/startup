@@ -1,0 +1,12 @@
+#!/bin/bash
+# Bell 47 Simulator Startup Script
+# Rod Thomas 24 Apr 2019
+
+cd $(dirname "$0")/src
+
+# Set sound volume
+amixer sset PCM 100%
+
+python3 -O FCD.py
+
+exit 0

@@ -1,0 +1,7 @@
+<c>Il controllo INCLINAZIONE COLLETTIVO
+
+Quando il controllo COLLETTIVO PITCH è sollevato aumenta il passo o l'angolo di attacco delle pale del rotore principale.
+
+Ciò aumenta il sollevamento generato dal rotore principale fino a quando questo è sufficiente per sollevare l'elicottero da terra.
+
+È chiamato controllo INCLINAZIONE COLLETTIVO perché il passo di tutte le pale del rotore è aumentato collettivamente, cioè della stessa quantità.

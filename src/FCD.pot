@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-05-30 16:03+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: FCD.py\n"
+"X-Poedit-SearchPath-1: simulator.py\n"
+"X-Poedit-SearchPath-2: defs.py\n"
+"X-Poedit-SearchPath-3: graphics.py\n"
+"X-Poedit-SearchPath-4: mmi.py\n"
+"X-Poedit-SearchPath-5: i18n.py\n"
+"X-Poedit-SearchPath-6: device.py\n"
+
+#: FCD.py:47 FCD.py:153
+msgid "Flight Controls Demonstrator"
+msgstr ""
+
+#: FCD.py:68
+msgid "Introduction"
+msgstr ""
+
+#: FCD.py:69
+msgid "How Do the Flight Controls Work on a Helicopter?"
+msgstr ""
+
+#: FCD.py:70
+msgid "Try Out the Flight Controls and See How They Affect the Rotor Blades"
+msgstr ""
+
+#: FCD.py:71
+msgid "Simple Flight Simulator"
+msgstr ""
+
+#: FCD.py:72
+msgid "Advanced Flight Simulator"
+msgstr ""
+
+#: FCD.py:73
+msgid "About"
+msgstr ""
+
+#: FCD.py:126
+msgid "Welcome to the"
+msgstr ""
+
+#: FCD.py:129
+msgid "Flight Controls"
+msgstr ""
+
+#: FCD.py:132
+msgid "Demonstrator"
+msgstr ""
+
+#: FCD.py:154
+msgid "Developed by Rod Thomas"
+msgstr ""
+
+#: FCD.py:155
+msgid "for The Helicopter Museum"
+msgstr ""
+
+#: FCD.py:156
+msgid "2020"
+msgstr ""
+
+#: FCD.py:297
+msgid "Do you want the blades to rotate?"
+msgstr ""
+
+#: FCD.py:301
+msgid "COLLECTIVE"
+msgstr ""
+
+#: FCD.py:302
+msgid "CYCLIC LONG"
+msgstr ""
+
+#: FCD.py:303
+msgid "CYCLIC LAT"
+msgstr ""
+
+#: FCD.py:304
+msgid "RUDDER PEDAL"
+msgstr ""
+
+#: FCD.py:333
+msgid "Watch how the blade angle changes as you move the controls."
+msgstr ""
+
+#: FCD.py:340
+msgid "The movement is exaggerated for the purposes of illustration."
+msgstr ""
+
+#: i18n.py:101
+msgid "Missing file"
+msgstr ""
+
+#: i18n.py:101
+msgid "for language"
+msgstr ""
+
+#: mmi.py:370
+msgid "Yes"
+msgstr ""
+
+#: mmi.py:373
+msgid "No"
+msgstr ""
+
+#: simulator.py:139
+msgid "On the ground"
+msgstr ""
+
+#: simulator.py:164
+msgid ""
+"Centre the cyclic, lower the collective and then press the button to start the engine.\n"
+"Try to take off, fly around and land back on the pad."
+msgstr ""
+
+#: simulator.py:172
+msgid ""
+"\n"
+"The direction arrow at the top of the screen indicates where to find the landing pad."
+msgstr ""
+
+#: simulator.py:208
+msgid "Starting up"
+msgstr ""
+
+#: simulator.py:216
+msgid "Running"
+msgstr ""
+
+#: simulator.py:243
+msgid "Flying"
+msgstr ""
+
+#: simulator.py:256
+msgid "Landed OK"
+msgstr ""
+
+#: simulator.py:262
+msgid "Oh dear, I'm afraid you crash landed!"
+msgstr ""
+
+#: simulator.py:264
+msgid "Missed the landing pad"
+msgstr ""
+
+#: simulator.py:266
+msgid "You landed OK but you missed the landing pad"
+msgstr ""
+
+#: simulator.py:268
+msgid ""
+"That was a heavy landing,\n"
+"and you missed the landing pad!"
+msgstr ""
+
+#: simulator.py:271
+msgid ""
+"Well done!\n"
+"You landed safely back on the landing pad"
+msgstr ""
+
+#: simulator.py:273
+msgid ""
+"You landed back on the pad\n"
+"but it was quite a heavy landing"
+msgstr ""

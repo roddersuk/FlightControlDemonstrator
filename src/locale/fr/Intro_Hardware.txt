@@ -1,0 +1,5 @@
+<c>Matériel
+
+Les positions de commande sont lues à partir des potentiomètres via un engrenage imprimé en 3D pour transformer le mouvement linéaire en mouvement rotatif.
+
+Les signaux des potentiomètres sont introduits dans une carte de circuit imprimé à interface personnalisée qui les convertit en signaux numériques à traiter par un ordinateur Raspberry Pi Zero.

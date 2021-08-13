@@ -1,0 +1,5 @@
+<c>Hardware
+
+Las posiciones de los controles se leen desde los potenciómetros a través del engranaje impreso en 3D para convertir el movimiento lineal en un movimiento giratorio.
+
+Las señales de los potenciómetros se alimentan a una placa de circuito de interfaz personalizada que las convierte en señales digitales para ser procesadas por una computadora Raspberry Pi Zero.

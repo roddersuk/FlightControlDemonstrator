@@ -1,0 +1,11 @@
+<c>Il controllo INCLINAZIONE CICLICA
+
+Il funzionamento del joystick è un po 'più complicato.
+
+Spostando il joystick in una particolare direzione, si riduce il passo delle pale del rotore principale quando passano da quella posizione e si aumenta quando ruotano di 180 gradi.
+
+Ciò si traduce nell'inclinazione dell'elicottero nella direzione del movimento a causa del sollevamento ridotto in quella direzione (e aumento della portanza nella direzione opposta).
+
+Quando l'elicottero si inclina, la spinta (sollevamento) del rotore principale viene diretta lontano dalla posizione del joystick, causando il movimento dell'aeromobile nella stessa direzione del joystick.
+
+Il controllo è noto come controllo INCLINAZIONE CICLICA perché il passo delle pale del rotore cambia costantemente mentre ruotano in modo ciclico.

@@ -1,0 +1,6 @@
+<c>Introduction
+
+This is the Flight Control Demonstrator rig and is designed to show how the main helicopter flight controls work.
+
+It uses the gearbox, rotor head, tail rotor and foot pedals from an Agusta Bell 47 helicopter and a cyclic stick from a Westland 30. 
+All mounted in a Dexion frame with custom control linkages.

@@ -1,0 +1,5 @@
+<c>Hardware
+
+The controls positions are read from potentiometers via 3D printed gearing to turn the linear movement into rotary motion.
+
+The signals from the potentiometers are fed into a custom interface circuit board which converts them into digital signals to be processed by a Raspberry Pi Zero computer.

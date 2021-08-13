@@ -1,0 +1,5 @@
+<c>Hardware
+
+Die Positionen der Steuerelemente werden vom Potentiometer über 3D gedruckte Verzahnung, die lineare Bewegung in eine Drehbewegung zu machen gelesen.
+
+Die Signale der Potentiometer werden in eine kundenspezifische Schnittstellenplatine eingespeist, die sie in digitale Signale umwandelt, die von einem Raspberry Pi Zero-Computer verarbeitet werden.

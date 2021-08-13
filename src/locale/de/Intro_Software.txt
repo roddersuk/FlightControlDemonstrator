@@ -1,0 +1,3 @@
+<c>Software
+
+Dieses Programm wurde in der Python-Sprache geschrieben. Die gpiozero-Bibliothek verwendet die Eingaben der Steuerelemente und der Pygame-Bibliothek, um die Grafiken auf dem Bildschirm zu erzeugen.

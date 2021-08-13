@@ -1,0 +1,9 @@
+<c>Panoramica
+
+Ci sono tre principali controlli di volo in un elicottero:
+
+Il joystick davanti a te fa muovere l'elicottero in avanti, indietro e lateralmente ed è conosciuto come il comando Il controllo INCLINAZIONE CICLICA.
+
+La leva in basso a sinistra fa salire e scendere l'elicottero ed è noto come controllo INCLINAZIONE COLLETTIVA.
+
+I pedali fanno girare l'elicottero a sinistra o a destra e sono noti come pedali ANTI-TORQUE.

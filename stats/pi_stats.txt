@@ -1,0 +1,22 @@
+events :0.206847 ms
+startup :0.041593 ms
+calcs :0.439005 ms
+text :24.055172 ms
+landing pad :11.084991 ms
+direction :1.220217 ms
+helicopter :23.335511 ms
+altimeter :6.421901 ms
+artificial horizon :8.772060 ms
+update :17.640627 ms
+
+#no text and fill bgd not counted
+events :0.309540 ms
+startup :0.045496 ms
+calcs :0.517227 ms
+text :0.042380 ms
+landing pad :8.772837 ms
+direction :1.283491 ms
+helicopter :23.489061 ms
+altimeter :6.321194 ms
+artificial horizon :8.344710 ms
+update :21.418265 ms

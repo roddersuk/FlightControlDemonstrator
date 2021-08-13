@@ -1,0 +1,7 @@
+<c>El control COLECTIVO PITCH.
+
+A medida que se eleva el control COLLECTIVE PITCH, aumenta el paso o el ángulo de ataque de las palas del rotor principal.
+
+Esto aumenta la elevación generada por el rotor principal hasta que esto es suficiente para elevar el helicóptero del suelo.
+
+Se denomina control COLECTIVO PITCH porque el paso de todas las palas del rotor aumenta colectivamente, es decir, en la misma cantidad.

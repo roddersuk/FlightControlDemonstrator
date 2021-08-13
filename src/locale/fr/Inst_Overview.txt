@@ -1,0 +1,9 @@
+<c>Vue d'ensemble
+
+Il y a trois commandes de vol principales dans un hélicoptère:
+
+Le joystick que vous avez devant vous permet à l’hélicoptère d’aller de l’avant, de l’arrière et de côté et est connu sous le nom de commande de PITCH CYCLIQUE.
+
+Le levier situé à votre gauche fait monter et descendre l'hélicoptère et est connu sous le nom de commande COLLECTIVE PITCH.
+
+Les pédales font tourner l'hélicoptère à gauche ou à droite et sont connues sous le nom de pédales ANTI-TORQUE.

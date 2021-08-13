@@ -1,0 +1,7 @@
+<c>Der COLLECTIVE PITCH-Regler
+
+Wenn der COLLECTIVE PITCH-Regler angehoben wird, erhöht er die Steigung oder den Anstellwinkel der Hauptrotorblätter.
+
+Dadurch wird der vom Hauptrotor erzeugte Auftrieb erhöht, bis der Hubschrauber vom Boden abhebt.
+
+Sie wird als COLLECTIVE PITCH-Steuerung bezeichnet, da die Steigung aller Rotorblätter gemeinsam erhöht wird, d. H. Um den gleichen Betrag.
