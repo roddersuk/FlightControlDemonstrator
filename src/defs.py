@@ -34,7 +34,21 @@ class BTN(Enum):
     UP = 7
     DOWN = 8
     SEAT = 9
-    MOTOR  = 10
+    MOTOR_PRESENT  = 10
+    
+class GPIO(Enum):
+    BTN1 = 5
+    BTN2 = 6
+    BTN3 = 13
+    BTN4 = 16
+    BTN5 = 20
+    LEFT = 18
+    RIGHT = 23
+    UP = 25
+    DOWN = 24
+    SEAT = 26
+    MOTOR_PRESENT = 12
+    MOTOR = 4
     
 config = configparser.ConfigParser()
 config.read("FCD.ini")

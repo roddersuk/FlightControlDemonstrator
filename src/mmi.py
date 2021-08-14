@@ -174,12 +174,12 @@ class InputManager(object) :
         """
         got_input = False
         self._button_pressed = False
-        if (event.type is pygame.KEYDOWN
-            or event.type is pygame.KEYUP):
+        if (event.type == pygame.KEYDOWN
+            or event.type == pygame.KEYUP):
             got_input = self._get_keyboard_input(event)
-        elif (event.type is pygame.JOYAXISMOTION 
-              or event.type is pygame.JOYBUTTONDOWN
-              or event.type is pygame.JOYBUTTONUP):
+        elif (event.type == pygame.JOYAXISMOTION 
+              or event.type == pygame.JOYBUTTONDOWN
+              or event.type == pygame.JOYBUTTONUP):
             got_input = self._get_joystick_input(event)
         return got_input
 
@@ -566,6 +566,7 @@ def test():
     print("cycr  cycp  coll  antq  btn   soc")                          
     while not done:
         for event in pygame.event.get():
+            #print(event)
             if event.type == pygame.QUIT or(event.type == pygame.KEYUP and event.key == pygame.K_ESCAPE):
                 raise QuitException()
             else:

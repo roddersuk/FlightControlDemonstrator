@@ -18,8 +18,8 @@ This is not reversible so should be the final step before production.
 
 '''
 __author__ = 'Rod Thomas <rod.thomas@talktalk.net>'
-__date__ = '30 May 2020'
-__version__ = '0.5.8'
+__date__ = '14 Aug 2021'
+__version__ = '0.5.9'
 
 # Library imports
 import pygame
@@ -91,7 +91,7 @@ def main() :
                     pygame.mixer.stop()
                 im.reset()
                 state = ProgramState.WELCOME
-        clock.tick(10)
+            clock.tick(10)
                 
     except QuitException as qe:
         import traceback
@@ -347,6 +347,7 @@ def try_controls(screen : pygame.surface) -> ProgramState :
     
     clock = pygame.time.Clock()
     finished = False
+    pygame.key.set_repeat(150, 100)
     while not finished :
         for event in im.get_events():
             im.get_input(event)
@@ -380,7 +381,9 @@ def try_controls(screen : pygame.surface) -> ProgramState :
                 rects += rudder_pedal_meter.blit(screen, (im.r + 1.0) / 2.0 * 100.0, [-40, 760])
                 
                 pygame.display.update(rects)
-            clock.tick(60)
+        clock.tick(60)
+        
+    pygame.key.set_repeat()
     
     if rotor_on:
         im.motor(False)

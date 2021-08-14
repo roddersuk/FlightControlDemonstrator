@@ -29,17 +29,17 @@ class InterfaceBoard(threading.Thread):
         self._present = gpio_present
         if self._present:
             self._buttons = {
-                5  : {"id" : defs.BTN.BTN1.value,  "name" : "Btn1"}, 
-                6  : {"id" : defs.BTN.BTN2.value, "name" : "Btn2"}, 
-                13 : {"id" : defs.BTN.BTN3.value,  "name" : "Btn3"}, 
-                16 : {"id" : defs.BTN.BTN4.value,  "name" : "Btn4"},
-                20 : {"id" : defs.BTN.BTN5.value,  "name" : "Btn5"},
-                18 : {"id" : defs.BTN.LEFT.value,  "name" : "Left"},
-                23 : {"id" : defs.BTN.RIGHT.value, "name" : "Right"},
-                25 : {"id" : defs.BTN.UP.value,    "name" : "Up"},
-                24 : {"id" : defs.BTN.DOWN.value,  "name" : "Down"},
-                26 : {"id" : defs.BTN.SEAT.value,  "name" : "Seat"},
-                12 : {"id" : defs.BTN.MOTOR.value, "name" : "Motor"}, 
+                defs.GPIO.BTN1.value  : {"id" : defs.BTN.BTN1.value,  "name" : "Btn1"}, 
+                defs.GPIO.BTN2.value  : {"id" : defs.BTN.BTN2.value, "name" : "Btn2"}, 
+                defs.GPIO.BTN3.value : {"id" : defs.BTN.BTN3.value,  "name" : "Btn3"}, 
+                defs.GPIO.BTN4.value : {"id" : defs.BTN.BTN4.value,  "name" : "Btn4"},
+                defs.GPIO.BTN5.value : {"id" : defs.BTN.BTN5.value,  "name" : "Btn5"},
+                defs.GPIO.LEFT.value : {"id" : defs.BTN.LEFT.value,  "name" : "Left"},
+                defs.GPIO.RIGHT.value : {"id" : defs.BTN.RIGHT.value, "name" : "Right"},
+                defs.GPIO.UP.value : {"id" : defs.BTN.UP.value,    "name" : "Up"},
+                defs.GPIO.DOWN.value : {"id" : defs.BTN.DOWN.value,  "name" : "Down"},
+                defs.GPIO.SEAT.value : {"id" : defs.BTN.SEAT.value,  "name" : "Seat"},
+                defs.GPIO.MOTOR_PRESENT.value : {"id" : defs.BTN.MOTOR_PRESENT.value, "name" : "Motor"}, 
             }
             self._run = True
             self._x = self._y = self._z = self._r = 0.0
@@ -49,22 +49,22 @@ class InterfaceBoard(threading.Thread):
                 self._zpot = MCP3008(2)
                 self._rpot = MCP3008(3)
                 for pin, data in self._buttons.items():
-                    if pin == 26 or pin == 12:
+                    if pin == defs.GPIO.SEAT.value or pin == defs.GPIO.MOTOR_PRESENT.value:
                         btn = Button(pin)
                     else:
                         btn = Button(pin, hold_repeat=True)
                         btn.when_held = self._button_held
-                    if pin == 12:
+                    if pin == defs.GPIO.MOTOR_PRESENT.value:
                         self._motor_present = btn.is_pressed
                     else:
                         data["NC"] = btn.is_pressed
                         btn.when_activated = self._button_pressed
                         btn.when_deactivated = self._button_released
-                        if pin == 26:
+                        if pin == defs.GPIO.SEAT.value:
                             self._seat_switch = btn
                     data["btn"] = btn
                 if (self._motor_present):
-                    self._motor = DigitalOutputDevice(4)
+                    self._motor = DigitalOutputDevice(defs.GPIO.MOTOR.value)
             except Exception as e:
                 print(e)
                 self._present = False
