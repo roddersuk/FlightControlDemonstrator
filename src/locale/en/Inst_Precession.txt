@@ -1,0 +1,11 @@
+<c>Precession
+
+The actual implementation of the cyclic control is more complex than shown in this demonstrator.
+
+The spinning main rotor of a helicopter acts like a gyroscope.
+ 
+Gyroscopic precession is the resultant action or deflection of a spinning object when a force is applied to this object.
+ 
+This action occurs approximately 90° later in the direction of rotation from the point where the force is applied.
+
+This means that in reality the cyclic controls have to apply force 90 degrees ahead of the desired action.

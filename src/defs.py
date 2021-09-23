@@ -69,6 +69,7 @@ LIGHT_BLUE = '[79, 98, 142]'
 MID_BLUE = '[46, 65, 114]'
 DARK_BLUE = '[22, 41, 85]'
 GREEN = '[10, 170, 10]'
+LIGHT_RED = '[255, 77, 77]'
 
 WELCOME_TEXT_COLOUR = json.loads(config['colours'].get('welcome_text', fallback = WHITE))
 ABOUT_FOREGROUND_COLOUR = json.loads(config['colours'].get('about_text', fallback = GOLD))
@@ -84,6 +85,8 @@ CONTROL_FOREGROUND_COLOUR = json.loads(config['colours'].get('control_text', fal
 CONTROL_BACKGROUND_COLOUR = json.loads(config['colours'].get('control_background', fallback = '[123, 181, 218]'))
 SIM_BACKGROUND_COLOUR = json.loads(config['colours'].get('sim_background', fallback = GREEN))
 HIGHLIGHT_COLOUR = json.loads(config['colours'].get('highlight', fallback = VERY_LIGHT_GOLD))
+CALIBRATE_BACKGROUND_COLOUR = json.loads(config['colours'].get('calibrate_background', fallback = LIGHT_RED))
+CALIBRATE_FOREGROUND_COLOUR = json.loads(config['colours'].get('calibrate_foreground', fallback = BLACK))
 
 # fonts
 FONT_WELCOME = config['fonts'].get('welcome', fallback = 'Arial,64,False,False').split(',')

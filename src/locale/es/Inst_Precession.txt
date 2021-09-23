@@ -1,0 +1,11 @@
+<c>Precesión
+
+La implementación real del control cíclico es más compleja de lo que se muestra en este demostrador.
+
+El rotor principal giratorio de un helicóptero actúa como un giroscopio.
+ 
+La precesión giroscópica es la acción o desviación resultante de un objeto que gira cuando se aplica una fuerza a este objeto.
+ 
+Esta acción ocurre aproximadamente 90° más tarde en la dirección de rotación desde el punto donde se aplica la fuerza.
+
+Esto significa que, en realidad, los controles cíclicos deben aplicar fuerza 90 grados antes de la acción deseada.

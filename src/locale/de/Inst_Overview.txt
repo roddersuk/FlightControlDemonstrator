@@ -7,3 +7,5 @@ Der Joystick vor Ihnen lässt den Hubschrauber vorwärts, rückwärts und seitw�
 Wenn Sie den Hebel nach links unten bewegen, wird der Hubschrauber nach oben und unten bewegt und ist als COLLECTIVE PITCH-Regler bekannt.
 
 Die Fußpedale lässt den Hubschrauber nach links oder rechts drehen und wird als ANTI-TORQUE-Pedale bezeichnet.
+
+Dieser Demonstrator ist zum besseren Verständnis vereinfacht und beinhaltet nicht die Auswirkungen von Präzession.

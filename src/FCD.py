@@ -8,7 +8,7 @@ on an optional motor to drive the rotor.
 Requires Python3, Pygame and gpiozero
 
 The raspberry pi should have Raspian Lite installed and be configured to enable the SPI interface and optionally 
-connect to the THM network.
+connect to the THM network. [see INSTAL.md]
 To enable the shutdown/startup button add the line 
     dtoverlay=gpio-shutdown
 to the file /boot/config.txt 
@@ -18,19 +18,20 @@ This is not reversible so should be the final step before production.
 
 '''
 __author__ = 'Rod Thomas <rod.thomas@talktalk.net>'
-__date__ = '14 Aug 2021'
-__version__ = '0.5.9'
+__date__ = '23 Sep 2021'
+__version__ = '0.6.0'
 
 # Library imports
 import pygame
 import math
+from datetime import datetime
 #import logging
 
 # Project imports
 import defs
 from defs import ProgramState, QuitException, ResetException
-from i18n import load_languages, select_language
-from mmi import scroll_text, render_text_list, wrap_text, get_font, ask, InputManager, choose_cell, get_image
+from i18n import load_languages, select_language, scroll_text 
+from mmi import render_text_list, wrap_text, get_font, ask, InputManager, choose_cell, get_image
 from mmi import WELCOME_FONT, DESC_FONT, INFO_FONT, SMALL_FONT, MENU_FONT, WELCOME_IMAGE, LOGO_IMAGE
 from graphics import CollectiveMeter, PercentMeter, round_rect, rotate
 from simulator import simulator
@@ -134,6 +135,10 @@ def welcome(screen : pygame.surface) -> ProgramState:
     screen.blit(t, text_rect)
     
     small_font = get_font(SMALL_FONT)
+    now = datetime.now()
+    t = small_font.render("%s" % (now.strftime("%d/%b/%Y %H:%M:%S")), False, defs.WHITE)
+    text_rect = t.get_rect(bottomleft = screen_rect.bottomright).move(-120, -10)
+    screen.blit(t, text_rect)
     t = small_font.render("v %s" % (__version__), False, defs.WHITE)
     text_rect = t.get_rect(bottomleft = screen_rect.bottomleft).move(10, -10)
     screen.blit(t, text_rect)
@@ -276,7 +281,7 @@ def describe(screen : pygame.surface) -> ProgramState :
     screen: The surface to display the descriptions on
     """
     scroll_text(screen, 
-                ['Inst_Overview.txt', 'Inst_Collective.txt', 'Inst_Cyclic.txt', 'Inst_AntiTorque.txt'], 
+                ['Inst_Overview.txt', 'Inst_Collective.txt', 'Inst_Cyclic.txt', 'Inst_AntiTorque.txt', 'Inst_Precession.txt'], 
                 get_font(DESC_FONT), 
                 defs.DESC_FOREGROUND_COLOUR, 
                 defs.DESC_BACKGROUND_COLOUR, 

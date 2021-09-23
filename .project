@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.python.pydev.pythonNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Diagrams/InterfaceBoard.sch</name>
+			<type>1</type>
+			<location>/home/rod/EAGLE/projects/THM/Flight Controls Demonstrator/InterfaceBoard.sch</location>
+		</link>
+		<link>
+			<name>Diagrams/WiringDiagram.sch</name>
+			<type>1</type>
+			<location>/home/rod/EAGLE/projects/THM/Flight Controls Demonstrator/WiringDiagram.sch</location>
+		</link>
+	</linkedResources>
 </projectDescription>

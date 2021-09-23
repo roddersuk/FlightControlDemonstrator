@@ -6,8 +6,10 @@ import gettext
 import pygame
 from pathlib import Path
 
-from mmi import choose_cell
-from defs import HIGHLIGHT_COLOUR
+import mmi
+import graphics
+# from mmi import choose_cell
+from defs import HIGHLIGHT_COLOUR, BTN_SELECT
 
 languages = {}
 current_language = 'en'
@@ -81,7 +83,7 @@ def select_language(screen : pygame.surface) -> bool:
             cellx = i
             pygame.draw.rect(screen, HIGHLIGHT_COLOUR, flag_rects[cellx], 2)
     # Let the user choose
-    result = choose_cell(cells, cellx)
+    result = mmi.choose_cell(cells, cellx)
     if result[1] != cellx:
         cellx = result[1]
         set_language(sorted_flags[cellx])
@@ -101,5 +103,95 @@ def read_file(name : str) -> str :
         text = _("Missing file") + " '" + name + "' " + _("for language") + " '" + current_language + "'"
     return text    
     
+def scroll_text(screen : pygame.surface,
+                filenames : [],
+                font : pygame.font, 
+                fgd: (),
+                bgd: (),
+                rectmain : pygame.rect,
+                label : bool = False):
+    """Render text to the screen in a scrollable window.
+    
+    screen: the screen to render to
+    filenames: files containing the text to render
+    font: the font to use
+    fgd: the foreground colour
+    bgd: the background colour
+    rectmain: the window to scroll within
+    label: text is static requiring no input
+    """
+    im = mmi.InputManager.get_instance()
+    rect = rectmain.copy()
+    prev_page = page = 0
+    if not label: 
+        pygame.key.set_repeat(150, 100)
+        im.set_scroll(True)
+        rect.inflate_ip(-100, -100)
+        arrows = graphics.Arrows()
+    rects = []
+    finished = False
+    while not finished :
+        first_pass = True
+        # Get the page text and render it onto a surface, wrapped if necessary
+        text = read_file(filenames[page])
+        lines = mmi.wrap_text(text, font, rect.width)
+        surf = mmi.render_text_list(lines, font, fgd, bgd) 
+        maxy = rect.top
+        if surf.get_height() > rect.height :
+            miny = maxy - surf.get_height() + rect.height
+        else :
+            miny = maxy
+        y_offset = maxy
+        y_inc = 10
+        prev_y_offset = y_offset - 1
+        change_page = False
+        while not finished and (label or not change_page):
+            if first_pass:                  
+                if bgd != None:
+                    screen.fill(bgd, rectmain)
+                rects = []
+            else:
+                for r in rects:
+                    screen.fill(bgd, r)
+            if not label:
+                # Get input, changing page in the x direction and scrolling in the y direction
+                for event in im.get_events():
+                    if ((event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE) 
+                        or (event.type == pygame.JOYBUTTONDOWN and event.button == BTN_SELECT)):
+                        finished = True
+                    else :
+                        arrow = im.get_arrow(event)
+                        if arrow != None:
+                            if arrow == pygame.K_UP and y_offset < maxy:
+                                y_offset += y_inc
+                            elif arrow == pygame.K_DOWN and y_offset > miny:
+                                y_offset -= y_inc
+                            elif arrow == pygame.K_LEFT and page > 0:
+                                page -= 1
+                            elif arrow == pygame.K_RIGHT and page < len(filenames) - 1:
+                                page += 1
+                        change_page = page != prev_page
+                        if change_page or y_offset != prev_y_offset:
+                            break
+                # Display arrows if there is more to come in the x or y direction
+                if y_offset != prev_y_offset:                    
+                    rects += arrows.blit(screen, rectmain, page > 0, page < len(filenames) - 1, y_offset < maxy, y_offset > miny)
+            # Show the scrolled text if it has moved
+            if y_offset != prev_y_offset:                    
+                screen.set_clip(rect)
+                rects.append(screen.blit(surf, [rect.left, y_offset]))      
+                screen.set_clip()
+                if first_pass:
+                    first_pass = False
+                    pygame.display.update()
+                else:
+                    pygame.display.update(rects)
+            if label:
+                finished = True
+            prev_y_offset = y_offset
+            prev_page = page
+    if not label: 
+        pygame.key.set_repeat()
+        im.set_scroll(False)
         
         

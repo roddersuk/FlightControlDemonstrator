@@ -7,3 +7,5 @@ Il joystick davanti a te fa muovere l'elicottero in avanti, indietro e lateralme
 La leva in basso a sinistra fa salire e scendere l'elicottero ed è noto come controllo INCLINAZIONE COLLETTIVA.
 
 I pedali fanno girare l'elicottero a sinistra o a destra e sono noti come pedali ANTI-TORQUE.
+
+Questo dimostratore è semplificato per aiutare la comprensione e non include gli effetti della Precessione.

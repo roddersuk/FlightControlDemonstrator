@@ -1,0 +1,11 @@
+<c>Précession
+
+La mise en œuvre réelle de la commande cyclique est plus complexe que celle illustrée dans ce démonstrateur.
+
+Le rotor principal en rotation d'un hélicoptère agit comme un gyroscope.
+ 
+La précession gyroscopique est l'action ou la déviation résultante d'un objet en rotation lorsqu'une force est appliquée à cet objet.
+ 
+Cette action se produit environ 90° plus tard dans le sens de rotation à partir du point où la force est appliquée.
+
+Cela signifie qu'en réalité, les commandes cycliques doivent appliquer une force à 90 degrés avant l'action souhaitée.

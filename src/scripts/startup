@@ -1,8 +1,8 @@
 #!/bin/bash
-# Bell 47 Simulator Startup Script
+# Bell 47 Flight Control Simulator Startup Script
 # Rod Thomas 24 Apr 2019
 
-cd $(dirname "$0")/src
+cd $(dirname "$0")/..
 
 # Set sound volume
 amixer sset PCM 100%

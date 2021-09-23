@@ -1,0 +1,11 @@
+<c>Präzession
+
+Die tatsächliche Implementierung der zyklischen Steuerung ist komplexer als in diesem Demonstrator gezeigt.
+
+Der sich drehende Hauptrotor eines Hubschraubers wirkt wie ein Gyroskop.
+ 
+Kreiselpräzession ist die resultierende Aktion oder Auslenkung eines sich drehenden Objekts, wenn eine Kraft auf dieses Objekt ausgeübt wird.
+ 
+Dieser Vorgang erfolgt ca. 90° später in Drehrichtung ab dem Kraftangriffspunkt.
+
+Dies bedeutet, dass die zyklischen Steuerungen in der Realität 90 Grad vor der gewünschten Aktion Kraft aufbringen müssen.

@@ -7,3 +7,5 @@ Le joystick que vous avez devant vous permet à l’hélicoptère d’aller de l
 Le levier situé à votre gauche fait monter et descendre l'hélicoptère et est connu sous le nom de commande COLLECTIVE PITCH.
 
 Les pédales font tourner l'hélicoptère à gauche ou à droite et sont connues sous le nom de pédales ANTI-TORQUE.
+
+Ce démonstrateur est simplifié pour faciliter la compréhension et n'intègre pas les effets de Précession.

@@ -1,0 +1,11 @@
+<c>Precessione
+
+L'effettiva implementazione del controllo ciclico è più complessa di quanto mostrato in questo dimostratore.
+
+Il rotore principale rotante di un elicottero si comporta come un giroscopio.
+ 
+La precessione giroscopica è l'azione o la deflessione risultante di un oggetto rotante quando viene applicata una forza a questo oggetto.
+ 
+Questa azione si verifica circa 90° dopo nel senso di rotazione dal punto in cui viene applicata la forza.
+
+Ciò significa che in realtà i controlli ciclici devono applicare una forza di 90 gradi prima dell'azione desiderata.
