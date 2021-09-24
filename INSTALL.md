@@ -134,4 +134,4 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 * Make acopy of the image
 	* `sudo fdisk -l` to find the SD card device name
 	* `sudo dd if=/dev/mmcblk0 of=FCD.img bs=4M` to get an image file (use the right device name
-	* `pishrink -az FCD.img`
+	* `sudo pishrink -az FCD.img`
