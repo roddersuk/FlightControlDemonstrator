@@ -1,5 +1,6 @@
 # Instructions for creating the SD card for the FCD
 The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable using the Raspberry Pi Imager.
+
 ## Configure the O/S
 * First flash the O/S onto the SD card using a PC
 * Put the SD card into the Pi and boot up.
@@ -120,8 +121,17 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 * `sudo vi /etc/rc.local` and add the following line just before exit 0
 	`sudo /home/pi/.local/bin/FlightControlDemonstrator/src/scripts/startup&`
 	
-## Set up CRON job to do shutdown
-* TBD
+## Set up CRON job to do shutdown at 4:30
+* `sudo crontab -e`
+	Add `30 16 * * * shutdown -h +1 FCD Shutting down for the day...`
 
 ## Make a backup copy of the SD card
-* TBD
+* Shut down the Pi and put the SD card in your Linux machine
+* Get PiShrink
+	* `wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh`
+	* `chmod +x pishrink.sh`
+	* `sudo mv pishrink.sh /usr/local/bin`
+* Make acopy of the image
+	* `sudo fdisk -l` to find the SD card device name
+	* `sudo dd if=/dev/mmcblk0 of=FCD.img bs=4M` to get an image file (use the right device name
+	* `pishrink -az FCD.img`
