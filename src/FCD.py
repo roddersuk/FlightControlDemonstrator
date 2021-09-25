@@ -120,7 +120,7 @@ def welcome(screen : pygame.surface) -> ProgramState:
     screen.blit(welcome_image, img_rect)
     
     logo_image = get_image(LOGO_IMAGE, "images/blue_museum_logo.png")
-    logo_rect = logo_image.get_rect(bottomright = screen_rect.bottomright).move(-20, -20)
+    logo_rect = logo_image.get_rect(bottomright = screen_rect.bottomright).move(-20, -25)
     screen.blit(logo_image, logo_rect)
     
     font = get_font(WELCOME_FONT)
@@ -158,7 +158,7 @@ def about(screen: pygame.surface):
         ["<c>" + _("Flight Controls Demonstrator") + " v " + __version__,
          "<c>" + _("Developed by Rod Thomas"),
          "<c>" + _("for The Helicopter Museum"),
-         "<c>" + _("2020")], 
+         "<c>" + _("2021")], 
         get_font(INFO_FONT), 
         defs.ABOUT_FOREGROUND_COLOUR,
         defs.ABOUT_BACKGROUND_COLOUR) 

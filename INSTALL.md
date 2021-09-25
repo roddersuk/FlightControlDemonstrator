@@ -29,18 +29,13 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 * `sudo apt autoremove` (to clean up)
 
 ## Install software to support the application
+* `sudo apt install git`
 * `sudo apt install python3-pygame`
 * `sudo apt install python3-gpiozero`
 * `sudo apt install fontconfig`
 * `sudo apt install ttf-mscorefonts-installer`
-* Download DancingScript font 
-	`wget https://www.wfonts.com/font/dancing-script`
-* copy to /usr/share/fonts/truetype
-
-## Configure shutdown
-* `sudo vi /boot/config.txt` and add this line at the end:
-	`dtoverlay=gpio-shutdown,gpio_pin=17`
-	
+* `sudo apt install fonts-dancingscript`
+		
 ## Configure the RTC
 	[http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time]
 * `sudo vi /boot/config.txt` and add this line at the end:
@@ -63,6 +58,12 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 	* Check using
 		* `sudo hwclock -r`
 		* `date`
+
+## Configure shutdown
+* `sudo vi /boot/config.txt` and add this line at the end:
+	`dtoverlay=gpio-shutdown,gpio_pin=17`
+* `sudo crontab -e`
+	Add `30 16 * * * shutdown -h +1 FCD Shutting down for the day...`
 		
 ## Configure WifiDirect 
 	[https://www.raspberryconnect.com/projects/65-raspberrypi-hotspot-accesspoints/158-raspberry-pi-auto-wifi-hotspot-switch-direct-connection]
@@ -114,17 +115,12 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 	* Reset wpa_supplicant ssid
 	
 ## Install the application
-* `cd /home/pi/.local/bin`
 * Rename previous FlightControlDemonstrator to FlightControlDemonstrator.timestamp
 * Download the application
 	`git clone http://github.com/roddersuk/FlightControlDemonstrator`
 * `sudo vi /etc/rc.local` and add the following line just before exit 0
-	`sudo /home/pi/.local/bin/FlightControlDemonstrator/src/scripts/startup&`
+	`sudo /home/pi/FlightControlDemonstrator/src/scripts/startup&`
 	
-## Set up CRON job to do shutdown at 4:30
-* `sudo crontab -e`
-	Add `30 16 * * * shutdown -h +1 FCD Shutting down for the day...`
-
 ## Make a backup copy of the SD card
 * Shut down the Pi and put the SD card in your Linux machine
 * Get PiShrink
