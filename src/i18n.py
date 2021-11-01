@@ -41,6 +41,7 @@ def set_language(lang : str) :
     except :
         languages['en'].install()
         current_language = 'en'
+    mmi.current_language = current_language
         
 def get_languages() -> {} :
     return languages

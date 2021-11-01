@@ -6,117 +6,118 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2021-11-01 08:33+0000\n"
-"PO-Revision-Date: 2021-11-01 08:35+0000\n"
+"PO-Revision-Date: 2021-11-01 12:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: it_IT\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
 "X-Generator: Poedit 3.0\n"
-"X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: FCD.py:48 FCD.py:158
 msgid "Flight Controls Demonstrator"
-msgstr "Dimostratore di Controlli di Volo"
+msgstr "飞行控制演示器"
 
 #: FCD.py:69
 msgid "Introduction"
-msgstr "Introduzione"
+msgstr "介绍"
 
 #: FCD.py:70
 msgid "How Do the Flight Controls Work on a Helicopter?"
-msgstr "Come funzionano i controlli di volo su un elicottero?"
+msgstr "飞行控制如何在直升机上工作"
 
 #: FCD.py:71
 msgid "Try Out the Flight Controls and See How They Affect the Rotor Blades"
-msgstr "Prova i controlli di volo e scopri come influenzano le pale del rotore"
+msgstr ""
+"试用飞行控制装置，\n"
+"看看它们如何影响旋翼叶片"
 
 #: FCD.py:72
 msgid "Simple Flight Simulator"
-msgstr "Simulatore di volo semplice"
+msgstr "简单的飞行模拟器"
 
 #: FCD.py:73
 msgid "Advanced Flight Simulator"
-msgstr "Simulatore di volo avanzato"
+msgstr "高级飞行模拟器"
 
 #: FCD.py:74
 msgid "About"
-msgstr "Circa"
+msgstr "关于"
 
 #: FCD.py:127
 msgid "Welcome to the"
-msgstr "Benvenuto al"
+msgstr "欢迎来到"
 
 #: FCD.py:130
 msgid "Flight Controls"
-msgstr "Dimostratore di"
+msgstr "飞行控制"
 
 #: FCD.py:133
 msgid "Demonstrator"
-msgstr "Controlli di Volo"
+msgstr "演示者"
 
 #: FCD.py:159
 msgid "Developed by Rod Thomas"
-msgstr "Sviluppato da Rod Thomas"
+msgstr "由开发 Rod Thomas"
 
 #: FCD.py:160
 msgid "for The Helicopter Museum"
-msgstr "per il Museo di elicottero"
+msgstr "直升机博物馆"
 
 #: FCD.py:161
 msgid "2021"
-msgstr "2021"
+msgstr "二千〇二十一"
 
 #: FCD.py:301
 msgid "Do you want the blades to rotate?"
-msgstr "Vuoi che le lame ruotino?"
+msgstr "你想让刀片旋转"
 
 #: FCD.py:305
 msgid "COLLECTIVE"
-msgstr "COLLETTIVO"
+msgstr "集体"
 
 #: FCD.py:306
 msgid "CYCLIC LONG"
-msgstr "CICLICO LONG"
+msgstr "循环纵向"
 
 #: FCD.py:307
 msgid "CYCLIC LAT"
-msgstr "CICLICO LAT"
+msgstr "循环横向"
 
 #: FCD.py:308
 msgid "RUDDER PEDAL"
-msgstr "PEDALE DEL TIMONE"
+msgstr "方向舵踏板"
 
 #: FCD.py:337
 msgid "Watch how the blade angle changes as you move the controls."
-msgstr "Guarda come cambia l'angolo della lama mentre muovi i controlli."
+msgstr "当您移动控件时，观察刀片角度如何变化。"
 
 #: FCD.py:344
 msgid "The movement is exaggerated for the purposes of illustration."
-msgstr "Il movimento è esagerato ai fini dell'illustrazione."
+msgstr "为了说明的目的，该运动被夸大了。"
 
 #: i18n.py:103
 msgid "Missing file"
-msgstr "File mancante"
+msgstr "丢失文件"
 
 #: i18n.py:103
 msgid "for language"
-msgstr "per la lingua"
+msgstr "对于语言"
 
 #: mmi.py:371
 msgid "Yes"
-msgstr "Sì"
+msgstr "是的"
 
 #: mmi.py:374
 msgid "No"
-msgstr "No"
+msgstr "不"
 
 #: simulator.py:139
 msgid "On the ground"
-msgstr "Per terra"
+msgstr "在地上"
 
 #: simulator.py:164
 msgid ""
@@ -124,9 +125,8 @@ msgid ""
 "the engine.\n"
 "Try to take off, fly around and land back on the pad."
 msgstr ""
-"Centrare il ciclico, abbassare il collettivo e quindi premere il pulsante "
-"per avviare il motore.\n"
-"Prova a decollare, vola in volo e atterra sul tappetino."
+"使循环居中，降低集合体，然后按下按钮启动发动机。\n"
+"尝试起飞，飞来飞去，然后降落在垫子上。"
 
 #: simulator.py:172
 msgid ""
@@ -135,66 +135,119 @@ msgid ""
 "landing pad."
 msgstr ""
 "\n"
-"La freccia direzionale nella parte superiore dello schermo indica dove "
-"trovare il pad di atterraggio."
+"屏幕顶部的方向箭头指示在哪里可以找到着陆场。"
 
 #: simulator.py:208
 msgid "Starting up"
-msgstr "Cominciando"
+msgstr "启动"
 
 #: simulator.py:216
 msgid "Running"
-msgstr "In esecuzione"
+msgstr "跑步"
 
 #: simulator.py:243
 msgid "Flying"
-msgstr "Volante"
+msgstr "飞行"
 
 #: simulator.py:256
 msgid "Landed OK"
-msgstr "Atterrato OK"
+msgstr "着陆正常"
 
 #: simulator.py:262
 msgid "Oh dear, I'm afraid you crash landed!"
-msgstr "Oh, cara, temo che tu sia caduto a terra!"
+msgstr "哦，亲爱的，我怕你坠机了"
 
 #: simulator.py:264
 msgid "Missed the landing pad"
-msgstr "Manca il pad di atterraggio"
+msgstr "错过了着陆场"
 
 #: simulator.py:266
 msgid "You landed OK but you missed the landing pad"
-msgstr "Hai atterrato OK ma hai perso il pad di atterraggio"
+msgstr "你着陆正常，但你错过了着陆台"
 
 #: simulator.py:268
 msgid ""
 "That was a heavy landing,\n"
 "and you missed the landing pad!"
 msgstr ""
-"Quello era un atterraggio pesante,\n"
-"e ti sei perso il pad di atterraggio!"
+"那是一次沉重的着陆\n"
+"你错过了着陆垫"
 
 #: simulator.py:271
 msgid ""
 "Well done!\n"
 "You landed safely back on the landing pad"
 msgstr ""
-"Molto bene!\n"
-"Sei atterrato sicuro sul pianerottolo"
+"做得好\n"
+"你安全降落在着陆台上"
 
 #: simulator.py:273
 msgid ""
 "You landed back on the pad\n"
 "but it was quite a heavy landing"
 msgstr ""
-"Sei atterrato sul tappetino\n"
-"ma era un atterraggio piuttosto pesante"
+"你回到了垫子上 \n"
+"但这是一次沉重的着陆"
 
 #~ msgid "2020"
-#~ msgstr "2020"
+#~ msgstr "二千〇二十"
 
 #~ msgid "2019"
 #~ msgstr "2019"
 
+#~ msgid "Flight Controls Demonstrator V "
+#~ msgstr "Flugsteuerungen Demonstrator V "
+
 #~ msgid "Agusta Bell 47"
 #~ msgstr "Agusta Bell 47"
+
+#~ msgid "Basic Simulator"
+#~ msgstr "Grundlegender Simulator"
+
+#~ msgid "Controls"
+#~ msgstr "Kontrollen"
+
+#~ msgid "Cyclic (pitch):"
+#~ msgstr "Zyklisch (Tonhöhe):"
+
+#~ msgid "Cyclic (roll):"
+#~ msgstr "Zyklisch (Rolle):"
+
+#~ msgid "Collective:"
+#~ msgstr "Kollektiv:"
+
+#~ msgid "Anti-Torque:"
+#~ msgstr "Anti-Drehmoment:"
+
+#~ msgid "Pitch:"
+#~ msgstr "Tonhöhe:"
+
+#~ msgid "Roll:"
+#~ msgstr "Rollen:"
+
+#~ msgid "Forward Thrust:"
+#~ msgstr "Vorwärtsschub:"
+
+#~ msgid "Sideways Thrust:"
+#~ msgstr "Seitwärtsstoß:"
+
+#~ msgid "Lift:"
+#~ msgstr "Auftrieb:"
+
+#~ msgid "Yaw:"
+#~ msgstr "Gieren:"
+
+#~ msgid "Heading:"
+#~ msgstr "Überschrift:"
+
+#~ msgid "Altitude:"
+#~ msgstr "Höhe:"
+
+#~ msgid "Pad x:"
+#~ msgstr "Platz x:"
+
+#~ msgid "Pad y:"
+#~ msgstr "Platz y:"
+
+#~ msgid "HelicopterState:"
+#~ msgstr "Helikopterzustand:"

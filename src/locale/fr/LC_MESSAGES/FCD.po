@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-05-30 16:03+0100\n"
-"PO-Revision-Date: 2020-05-30 16:13+0100\n"
+"POT-Creation-Date: 2021-11-01 08:33+0000\n"
+"PO-Revision-Date: 2021-11-01 08:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -14,106 +14,106 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: pygettext.py 1.5\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: FCD.py:47 FCD.py:153
+#: FCD.py:48 FCD.py:158
 msgid "Flight Controls Demonstrator"
 msgstr "Démonstrateur de Commandes de Vol"
 
-#: FCD.py:68
+#: FCD.py:69
 msgid "Introduction"
 msgstr "Instructions"
 
-#: FCD.py:69
+#: FCD.py:70
 msgid "How Do the Flight Controls Work on a Helicopter?"
 msgstr "Comment fonctionnent les commandes de vol sur un hélicoptère?"
 
-#: FCD.py:70
+#: FCD.py:71
 msgid "Try Out the Flight Controls and See How They Affect the Rotor Blades"
 msgstr ""
 "Essayez les commandes de vol et voyez comment elles affectent les pales du "
 "rotor"
 
-#: FCD.py:71
+#: FCD.py:72
 msgid "Simple Flight Simulator"
 msgstr "Simulateur de vol simple"
 
-#: FCD.py:72
+#: FCD.py:73
 msgid "Advanced Flight Simulator"
 msgstr "Simulateur de vol avancé"
 
-#: FCD.py:73
+#: FCD.py:74
 msgid "About"
 msgstr "Sur"
 
-#: FCD.py:126
+#: FCD.py:127
 msgid "Welcome to the"
 msgstr "Bienvenue sur le"
 
-#: FCD.py:129
+#: FCD.py:130
 msgid "Flight Controls"
 msgstr "Démonstrateur de"
 
-#: FCD.py:132
+#: FCD.py:133
 msgid "Demonstrator"
 msgstr "Commandes de Vol"
 
-#: FCD.py:154
+#: FCD.py:159
 msgid "Developed by Rod Thomas"
 msgstr "Développé par Rod Thomas"
 
-#: FCD.py:155
+#: FCD.py:160
 msgid "for The Helicopter Museum"
 msgstr "pour le musée de l’hélicoptère"
 
-#: FCD.py:156
-msgid "2020"
-msgstr "2020"
+#: FCD.py:161
+msgid "2021"
+msgstr "2021"
 
-#: FCD.py:297
+#: FCD.py:301
 msgid "Do you want the blades to rotate?"
 msgstr "Voulez-vous que les lames tournent?"
 
-#: FCD.py:301
+#: FCD.py:305
 msgid "COLLECTIVE"
 msgstr "COLLECTIF"
 
-#: FCD.py:302
+#: FCD.py:306
 msgid "CYCLIC LONG"
 msgstr "CYCLIQUE LONG"
 
-#: FCD.py:303
+#: FCD.py:307
 msgid "CYCLIC LAT"
 msgstr "CYCLIQUE LAT"
 
-#: FCD.py:304
+#: FCD.py:308
 msgid "RUDDER PEDAL"
 msgstr "PEDALE DE GONFLE"
 
-#: FCD.py:333
+#: FCD.py:337
 msgid "Watch how the blade angle changes as you move the controls."
 msgstr ""
 "Observez l'évolution de l'angle de la lame lorsque vous déplacez les "
 "commandes."
 
-#: FCD.py:340
+#: FCD.py:344
 msgid "The movement is exaggerated for the purposes of illustration."
 msgstr "Le mouvement est exagéré à des fins d'illustration."
 
-#: i18n.py:101
+#: i18n.py:103
 msgid "Missing file"
 msgstr "Fichier manquant"
 
-#: i18n.py:101
+#: i18n.py:103
 msgid "for language"
 msgstr "pour la langue"
 
-#: mmi.py:370
+#: mmi.py:371
 msgid "Yes"
 msgstr "Oui"
 
-#: mmi.py:373
+#: mmi.py:374
 msgid "No"
 msgstr "Non"
 
@@ -192,6 +192,9 @@ msgid ""
 msgstr ""
 "Vous avez atterri sur le pad\n"
 "mais c'était un atterrissage assez lourd"
+
+#~ msgid "2020"
+#~ msgstr "2020"
 
 #~ msgid "2019"
 #~ msgstr "2019"

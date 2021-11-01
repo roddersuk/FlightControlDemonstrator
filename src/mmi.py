@@ -7,10 +7,8 @@ import time
 
 import defs
 from defs import event_module, QuitException, ResetException
-#import i18n
-#from i18n import read_file
-#from graphics import Arrows
 from device import InterfaceBoard
+#from i18n import get_local_font_name
 from pygame import event
 
 WELCOME_FONT = 'welcome'
@@ -19,8 +17,24 @@ DESC_FONT = 'desc'
 INFO_FONT = 'info'
 TEXT_FONT = 'text'
 SMALL_FONT = 'small'
-METER_FONT = "meter"
-ALTIMETER_FONT = "altimeter"
+METER_FONT = 'meter'
+ALTIMETER_FONT = 'altimeter'
+WELCOME_FONT_zh = 'welcome_zh'
+WELCOME_FONT_ru = 'welcome_ru'
+MENU_FONT_zh = 'menu_zh'
+DESC_FONT_zh = 'desc_zh'
+INFO_FONT_zh = 'info_zh'
+TEXT_FONT_zh = 'text_zh'
+SMALL_FONT_zh = 'small_zh'
+METER_FONT_zh = 'meter_zh'
+ALTIMETER_FONT_zh = 'altimeter_zh'
+MENU_FONT_ru = 'menu_ru'
+DESC_FONT_ru = 'desc_ru'
+INFO_FONT_ru = 'info_ru'
+TEXT_FONT_ru = 'text_ru'
+SMALL_FONT_ru = 'small_ru'
+METER_FONT_ru = 'meter_ru'
+ALTIMETER_FONT_ru = 'altimeter_ru'
 
 font_defs = {
     WELCOME_FONT:   defs.FONT_WELCOME,
@@ -30,19 +44,23 @@ font_defs = {
     TEXT_FONT:      defs.FONT_TEXT,
     SMALL_FONT:     defs.FONT_SMALL,
     METER_FONT:     defs.FONT_METER,
-    ALTIMETER_FONT: defs.FONT_ALTIMETER
-    }
-
-# font_defs = {
-#     WELCOME_FONT:   ("dancingscript", 128, True, False),
-#     MENU_FONT:      (None, 40, False, False),
-#     DESC_FONT:      ("timesnewroman", 48, False, False),
-#     INFO_FONT:      ("timesnewroman", 32, False, False),
-#     TEXT_FONT:      (None, 32, False, False),
-#     SMALL_FONT:     (None, 16, False, False),
-#     METER_FONT:     ("Arial", 16, True, False),
-#     ALTIMETER_FONT: ("Arial", 28, True, False)
-#     }
+    ALTIMETER_FONT: defs.FONT_ALTIMETER,
+    WELCOME_FONT_zh:   defs.FONT_WELCOME_zh,
+    WELCOME_FONT_ru:   defs.FONT_WELCOME_ru,
+    MENU_FONT_ru:      defs.FONT_MENU_ru,
+    DESC_FONT_ru:      defs.FONT_DESC_ru,
+    INFO_FONT_ru:      defs.FONT_INFO_ru,
+    TEXT_FONT_ru:      defs.FONT_TEXT_ru,
+    SMALL_FONT_ru:     defs.FONT_SMALL_ru,
+    METER_FONT_ru:     defs.FONT_METER_ru,
+    ALTIMETER_FONT_ru: defs.FONT_ALTIMETER_ru,
+    MENU_FONT_zh:      defs.FONT_MENU_zh,
+    DESC_FONT_zh:      defs.FONT_DESC_zh,
+    INFO_FONT_zh:      defs.FONT_INFO_zh,
+    TEXT_FONT_zh:      defs.FONT_TEXT_zh,
+    SMALL_FONT_zh:     defs.FONT_SMALL_zh,
+    METER_FONT_zh:     defs.FONT_METER_zh,
+    ALTIMETER_FONT_zh: defs.FONT_ALTIMETER_zh    }
 
 WELCOME_IMAGE = 'welcome'
 LOGO_IMAGE = 'logo'
@@ -54,23 +72,33 @@ DOWN_IMAGE = 'down'
 
 fonts = {}
 images = {}
+current_language = 'en'
 
 def str2bool(v):
     return v.lower() in ("yes", "true", "t", "1")
 
+def local_font_name(name):
+    if (current_language == 'zh'or current_language == 'ru') :
+        return name + '_' + current_language
+    else:
+        return name
+    
 def get_font(name: str) -> pygame.font:
     """Get one of the predefined fonts by name, loading it on first use.
     
     name (str): the font name
     """
-    if name not in fonts:
+    local_name = local_font_name(name)
+    if local_name not in font_defs:
+        local_name = name
+    if local_name not in fonts:
         if name not in font_defs:
-            name = TEXT_FONT
-        font_def = font_defs[name]
+            local_name = TEXT_FONT
+        font_def = font_defs[local_name]
 #        logging.debug("font %s is %s with size %s bold %s italic %s", name, font_def[0], font_def[1], font_def[2], font_def[3])
 #         fonts[name] = pygame.font.SysFont(font_def[0], font_def[1], font_def[2], font_def[3])
-        fonts[name] = pygame.font.SysFont(font_def[0], int(font_def[1]), str2bool(font_def[2]), str2bool(font_def[3]))
-    return fonts[name]
+        fonts[local_name] = pygame.font.SysFont(font_def[0], int(font_def[1]), str2bool(font_def[2]), str2bool(font_def[3]))
+    return fonts[local_name]
 
 def get_image(name: str, filepath: str = None, alpha: bool = True): 
     """Get one of the predefined images by name, loading it on first use.
@@ -164,7 +192,7 @@ class InputManager(object) :
         done = False
         while not done:   
             for event in self.get_events():
-                if event.type is pygame.KEYDOWN or event.type is pygame.JOYBUTTONDOWN:
+                if event.type == pygame.KEYDOWN or event.type == pygame.JOYBUTTONDOWN:
                     done = True
     
     def get_input(self, event) -> bool:

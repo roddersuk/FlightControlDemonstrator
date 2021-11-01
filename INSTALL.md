@@ -18,6 +18,8 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 		* `es_ES.UTF8`
 		* `fr_FR.UTF8`
 		* `it_IT.UTF8`
+		* `ru_RU.UTF8`
+		* `zh_CN.UTF8`
 	* Select Finish and reboot
 	
 ## Install software to support WiFi Direct
@@ -35,6 +37,11 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 * `sudo apt install fontconfig`
 * `sudo apt install ttf-mscorefonts-installer`
 * `sudo apt install fonts-dancingscript`
+long cang
+noto sans
+noto serif
+caveat
+
 		
 ## Configure the RTC
 	[http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time]
@@ -130,4 +137,4 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 * Make acopy of the image
 	* `sudo fdisk -l` to find the SD card device name
 	* `sudo dd if=/dev/mmcblk0 of=FCD.img bs=4M` to get an image file (use the right device name
-	* `sudo pishrink -az FCD.img`
+	* `sudo pishrink.sh -aZ FCD.img`

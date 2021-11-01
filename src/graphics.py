@@ -321,7 +321,7 @@ class Helicopter(object):
             The rotor is always cleared but the helicopter body is only cleared if the heading has changed
             by more than a given percentage to improve performance
         """
-        if self._rotor_rect is not None:
+        if self._rotor_rect != None:
             screen.fill(colour, self._rotor_rect)
             img_heading = quantize(heading, defs.HELI_ROTATION_PERCENT)
             if img_heading != self._prev_img_heading:
@@ -398,7 +398,7 @@ class Helicopter(object):
 
         # Work out the rects to be updated
         heli_rect = heli_shadow_rect = None
-        if img_heading is not self._prev_img_heading:
+        if img_heading != self._prev_img_heading:
             if prev_heli_rect is None:
                 heli_rect = self._heli_rect
                 if self.HELI_SHADOW:
