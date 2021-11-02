@@ -37,11 +37,18 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 * `sudo apt install fontconfig`
 * `sudo apt install ttf-mscorefonts-installer`
 * `sudo apt install fonts-dancingscript`
-long cang
-noto sans
-noto serif
-caveat
 
+adobe source han cn
+* `sudo apt install adobe-source-han-sans-cn-fonts`
+* `sudo apt install adobe-source-han-serif-cn-fonts`
+
+adobe source
+* `sudo apt install adobe-source-sans-fonts`
+* `sudo apt install adobe-source-serif-fonts`
+
+long cang
+caveat
+download from google fonts and install manually
 		
 ## Configure the RTC
 	[http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time]

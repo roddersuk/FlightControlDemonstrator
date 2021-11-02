@@ -226,51 +226,44 @@ class InputManager(object) :
         """
         chars = (pygame.K_b, pygame.K_d, pygame.K_g, pygame.K_h, pygame.K_l, pygame.K_p, pygame.K_t)
         self.char = None
-        got_input = False
+        got_input = True
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE :
                 self._button_pressed = True
                 self.char = event.key
-                got_input = True
             elif event.key == pygame.K_b:
                 self._seat_occupied = False
                 self.char = event.key
-                got_input = True
             elif event.key == pygame.K_UP:
                 self.y = self._increment(self.y, self.y_inc)
-                got_input = True
             elif event.key == pygame.K_DOWN:
                 self.y = self._increment(self.y, -self.y_inc)
-                got_input = True
             elif event.key == pygame.K_LEFT:
                 self.x = self._increment(self.x, -self.x_inc)
-                got_input = True
             elif event.key == pygame.K_RIGHT:
                 self.x = self._increment(self.x, self.x_inc)
-                got_input = True
             elif event.key == pygame.K_KP5:
                 self.x = 0.0
                 self.y = 0.0
-                got_input = True
             elif event.key == pygame.K_a:
                 self.z = self._incrementz(self.z, self.z_inc)
-                got_input = True
             elif event.key == pygame.K_z:
                 self.z = self._incrementz(self.z, -self.z_inc)
-                got_input = True
             elif event.key == pygame.K_x:
                 self.r = self._increment(self.r, self.r_inc)
-                got_input = True
             elif event.key == pygame.K_BACKSLASH:
                 self.r = self._increment(self.r, -self.r_inc)
-                got_input = True
             elif event.key in chars :
                 self.char = event.key
-                got_input = True
+            else:
+                got_input = False
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_SPACE:
                 self._button_pressed = False
-                got_input = True
+            else:
+                got_input = False
+        else:
+            got_input = False
         if got_input:
             self.reset_inactive_timer()
         return got_input
