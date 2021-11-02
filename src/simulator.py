@@ -184,17 +184,19 @@ def simulator(screen : pygame.surface, basic : bool = False) -> ProgramState:
         if __debug__:
             count += 1
         rects = []
-
+                                   
         # Process events
         if __debug__:t = time.time()
         for event in im.get_events():
-            im.get_input(event)
+            got = im.get_input(event)
             if not im._seat_occupied:
                 done = True
-            flight_controls.set(im)
+            if got:
+                flight_controls.set(im)
             if im.char != None:
                 sim_properties.set(im.char)
         if __debug__:timings['events'] += time.time() - t
+        # print("%3.3f %3.3f %3.3f %3.3f %5s %5s" % (im.x, im.y, im.z, im.r, im._button_pressed, im._seat_occupied), end='\r')
         
         # Start up the helicopter
         if __debug__:t = time.time()

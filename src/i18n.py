@@ -8,7 +8,6 @@ from pathlib import Path
 
 import mmi
 import graphics
-# from mmi import choose_cell
 from defs import HIGHLIGHT_COLOUR, BTN_SELECT
 
 languages = {}

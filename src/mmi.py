@@ -8,7 +8,6 @@ import time
 import defs
 from defs import event_module, QuitException, ResetException
 from device import InterfaceBoard
-#from i18n import get_local_font_name
 from pygame import event
 
 WELCOME_FONT = 'welcome'
@@ -25,16 +24,16 @@ MENU_FONT_zh = 'menu_zh'
 DESC_FONT_zh = 'desc_zh'
 INFO_FONT_zh = 'info_zh'
 TEXT_FONT_zh = 'text_zh'
-SMALL_FONT_zh = 'small_zh'
+# SMALL_FONT_zh = 'small_zh'
 METER_FONT_zh = 'meter_zh'
-ALTIMETER_FONT_zh = 'altimeter_zh'
+# ALTIMETER_FONT_zh = 'altimeter_zh'
 MENU_FONT_ru = 'menu_ru'
 DESC_FONT_ru = 'desc_ru'
 INFO_FONT_ru = 'info_ru'
 TEXT_FONT_ru = 'text_ru'
-SMALL_FONT_ru = 'small_ru'
+# SMALL_FONT_ru = 'small_ru'
 METER_FONT_ru = 'meter_ru'
-ALTIMETER_FONT_ru = 'altimeter_ru'
+# ALTIMETER_FONT_ru = 'altimeter_ru'
 
 font_defs = {
     WELCOME_FONT:   defs.FONT_WELCOME,
@@ -45,22 +44,23 @@ font_defs = {
     SMALL_FONT:     defs.FONT_SMALL,
     METER_FONT:     defs.FONT_METER,
     ALTIMETER_FONT: defs.FONT_ALTIMETER,
-    WELCOME_FONT_zh:   defs.FONT_WELCOME_zh,
     WELCOME_FONT_ru:   defs.FONT_WELCOME_ru,
     MENU_FONT_ru:      defs.FONT_MENU_ru,
     DESC_FONT_ru:      defs.FONT_DESC_ru,
     INFO_FONT_ru:      defs.FONT_INFO_ru,
     TEXT_FONT_ru:      defs.FONT_TEXT_ru,
-    SMALL_FONT_ru:     defs.FONT_SMALL_ru,
+    # SMALL_FONT_ru:     defs.FONT_SMALL_ru,
     METER_FONT_ru:     defs.FONT_METER_ru,
-    ALTIMETER_FONT_ru: defs.FONT_ALTIMETER_ru,
+    # ALTIMETER_FONT_ru: defs.FONT_ALTIMETER_ru,
+    WELCOME_FONT_zh:   defs.FONT_WELCOME_zh,
     MENU_FONT_zh:      defs.FONT_MENU_zh,
     DESC_FONT_zh:      defs.FONT_DESC_zh,
     INFO_FONT_zh:      defs.FONT_INFO_zh,
     TEXT_FONT_zh:      defs.FONT_TEXT_zh,
-    SMALL_FONT_zh:     defs.FONT_SMALL_zh,
+    # SMALL_FONT_zh:     defs.FONT_SMALL_zh,
     METER_FONT_zh:     defs.FONT_METER_zh,
-    ALTIMETER_FONT_zh: defs.FONT_ALTIMETER_zh    }
+    # ALTIMETER_FONT_zh: defs.FONT_ALTIMETER_zh   
+    }
 
 WELCOME_IMAGE = 'welcome'
 LOGO_IMAGE = 'logo'
