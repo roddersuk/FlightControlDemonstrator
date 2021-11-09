@@ -2,17 +2,24 @@
 The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable using the Raspberry Pi Imager.
 
 ## Configure the O/S
-* First flash the O/S onto the SD card using a PC
+* First flash the O/S onto the SD card using the Rapberry Pi Imageer on a PC
+	* Select Raspberry Pi OS Lite
+	* Select the SD card to write to
+	* Type Ctrl-Shift-x to get Advanced Options
+		* Set Hostname to THM-FCD
+		* Enable SSH and set the password to He!1c0pter
+		* Configure WiFi for a local network with internet access to download additional software
+	* Select write
 * Put the SD card into the Pi and boot up.
-* Log in as pi using the default password of ‘raspberry’ and run the configuration utility as root:
+* Log in using SSH as pi using the password of ‘He!1c0pter’ and run the configuration utility as root:
 	`sudo raspi-config`
-	* Select Change User Password and set it to '`He!1c0pter`'
-	* Select Network Options then Hostname and set it to `THM-FCD`
+	~~* Select Change User Password and set it to '`He!1c0pter`'~~
+	~~* Select Network Options then Hostname and set it to `THM-FCD`~~
 	* Select Interfacting Options then:
 		* Enable SPI for the application
-		* Enable SSH to allow remote access
+		~~* Enable SSH to allow remote access~~
 		* Enable I2C for the RTC
-	* Select WiFi and configure for a local network with internet access to download additional software
+	~~* Select WiFi and configure for a local network with internet access to download additional software~~
 	* Select Locales and add:
 		* `de_DE.UTF8`
 		* `es_ES.UTF8`
@@ -20,7 +27,7 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 		* `it_IT.UTF8`
 		* `ru_RU.UTF8`
 		* `zh_CN.UTF8`
-	* Select Finish and reboot
+	~~* Select Finish and reboot~~
 	
 ## Install software to support WiFi Direct
 * `sudo apt update`
