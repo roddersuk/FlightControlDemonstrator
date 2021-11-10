@@ -93,11 +93,11 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 ### Configure hostapd
 * Download the hostapd config
 	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/hostapd.txt`
-* Rename to hostapd.conf
-* `sudo vi hostapd.conf`
+* `sudo vi hostapd.txt`
 	* Set `ssid=THM-FCD-HS, channel=8`
 	* Set `wpa_passphrase=He!1c0pter`
-* `sudo mv hostapd.conf /etc/hostapd`
+* `sudo vi /etc/hostapd/ hostapd.conf`
+	* Insert contents of hostapd.txt
 * `sudo vi /etc/default/hostapd`
 	* Change:
 		`#DAEMON_CONF=””`
@@ -109,33 +109,42 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 * Download the dnsmasq config
 	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/dnsmasq.txt`
 * `sudo vi /etc/dnsmasq.conf`
-* Go to the bottom and insert the contents of dnsmasq.txt
+	* Go to the bottom and insert the contents of dnsmasq.txt
 * Check /etc/network/interfaces has only the standard line 'source-directory /etc/network/interfaces.d '
 		
 ### Configure DHCPCD
 * `sudo vi /etc/dhcpcd.conf`
-	Add this to the end of the file:
+	* Add this to the end of the file:
 	`nohook wpa_supplicant`
 	
 ### Configure autohotspot service
 * Download the autohotspot service
 	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/autohotspot-service.txt`
-	* Rename autohotspot-service.txt to autohotspot.service
+* `sudo vi autohotspot-service.txt`
 	* Change wifidev to <wifi device> if required
-	* `sudo cp autohotspot.service /etc/systemd/system`
-	* `sudo systemctl enable autohotspot.service`
+* `sudo vi /etc/systemd/system/autohotspot.service`
+	* Insert contents of autohotspot-service.txt
+* `sudo systemctl enable autohotspot.service`
+	
 ### Configure autohotspot script
 * Download the autohotspot script
 	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/autohotspot.txt`
-* Rename autohotspot.txt to autohotspot
-* `sudo cp autohotspot vi /usr/bin`
+* `sudo vi /usr/bin/autohotspot`
+	* Insert contents of autohotspot.txt
 * `sudo chmod +x /usr/bin/autohotspot`
+
 ### Test autohotspot
 * `sudo vi /etc/wpa_supplicant/wpa_supplicant.conf`
 	* Add ‘off’ to SSID making it invalid
 	* Reboot
 	* Search for networks to find THM-FCD-HS or use ssh pi@10.0.0.5
 	* Reset wpa_supplicant ssid
+	* Reboot
+	
+## Tidy up
+* `mkdir Downloads`
+* `mv *.zip Dowloads`
+* `mv *.txt Downloads`
 	
 ## Install the application
 * Rename previous FlightControlDemonstrator to FlightControlDemonstrator.timestamp
