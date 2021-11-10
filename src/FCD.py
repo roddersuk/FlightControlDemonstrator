@@ -18,8 +18,8 @@ This is not reversible so should be the final step before production.
 
 '''
 __author__ = 'Rod Thomas <rod.thomas@talktalk.net>'
-__date__ = '1 Nov 2021'
-__version__ = '0.7.1'
+__date__ = '10 Nov 2021'
+__version__ = '0.7.2'
 
 # Library imports
 import pygame

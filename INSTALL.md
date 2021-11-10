@@ -27,9 +27,8 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 		* `it_IT.UTF8`
 		* `ru_RU.UTF8`
 		* `zh_CN.UTF8`
-	~~* Select Finish and reboot~~
-	
-## Install software to support WiFi Direct
+	* Select OK and choose en_GB as the locale
+	## Install software to support WiFi Direct
 * `sudo apt update`
 * `sudo apt upgrade`
 * `sudo apt install i2c-tools` (for RTC)
@@ -44,19 +43,15 @@ The operating system  for the Raspberry Pi is Raspberry Pi OS Lite downloadable 
 * `sudo apt install fontconfig`
 * `sudo apt install ttf-mscorefonts-installer`
 * `sudo apt install fonts-dancingscript`
-
-adobe source han cn
-* `sudo apt install adobe-source-han-sans-cn-fonts`
-* `sudo apt install adobe-source-han-serif-cn-fonts`
-
-adobe source
-* `sudo apt install adobe-source-sans-fonts`
-* `sudo apt install adobe-source-serif-fonts`
-
-long cang
-caveat
-download from google fonts and install manually
-		
+* Get Google fonts for Chinese and Russian
+	* `wget -O NotoSansSC.zip https://fonts.google.com/download?family=Noto+Sans+SC`
+	* `wget -O NotoSerifSC.zip https://fonts.google.com/download?family=Noto+Serif+SC`
+	* `wget -O NotoSans.zip https://fonts.google.com/download?family=Noto+Sans`
+	* `wget -O NotoSerif.zip https://fonts.google.com/download?family=Noto+Serif`
+	* `wget -O LongCang.zip https://fonts.google.com/download?family=Long+Cang`
+	* `wget -O Caveat.zip https://fonts.google.com/download?family=Caveat`
+	* Unpack zip files into /usr/local/share/fonts
+	* `sudo unzip xxx.zip -d /usr/local/share/fonts/TTF` or OTF
 ## Configure the RTC
 	[http://learn.adafruit.com/adding-a-real-time-clock-to-raspberry-pi/set-rtc-time]
 * `sudo vi /boot/config.txt` and add this line at the end:
@@ -97,9 +92,12 @@ download from google fonts and install manually
 	
 ### Configure hostapd
 * Download the hostapd config
-	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/hostapd.txt` 
-* `sudo vi /etc/hostapd/hostapd.conf`
-	Copy content from hostapd.txt and set `ssid=THM-FCD-HS, channel=8` and `wpa_passphrase=He!1c0pter`
+	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/hostapd.txt`
+* Rename to hostapd.conf
+* `sudo vi hostapd.conf`
+	* Set `ssid=THM-FCD-HS, channel=8`
+	* Set `wpa_passphrase=He!1c0pter`
+* `sudo mv hostapd.conf /etc/hostapd`
 * `sudo vi /etc/default/hostapd`
 	* Change:
 		`#DAEMON_CONF=””`
@@ -110,24 +108,28 @@ download from google fonts and install manually
 ### Configure dnsmasq
 * Download the dnsmasq config
 	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/dnsmasq.txt`
-	* `sudo vi /etc/dnsmasq.conf`
-		* Copy content from dnsmasq.txt and add to the end of the file
-		* Check /etc/network/interfaces has only the standard 5 lines
+* `sudo vi /etc/dnsmasq.conf`
+* Go to the bottom and insert the contents of dnsmasq.txt
+* Check /etc/network/interfaces has only the standard line 'source-directory /etc/network/interfaces.d '
 		
 ### Configure DHCPCD
 * `sudo vi /etc/dhcpcd.conf`
 	Add this to the end of the file:
 	`nohook wpa_supplicant`
 	
-### Configure autohotspot
+### Configure autohotspot service
+* Download the autohotspot service
+	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/autohotspot-service.txt`
+	* Rename autohotspot-service.txt to autohotspot.service
+	* Change wifidev to <wifi device> if required
+	* `sudo cp autohotspot.service /etc/systemd/system`
+	* `sudo systemctl enable autohotspot.service`
+### Configure autohotspot script
 * Download the autohotspot script
 	`wget https://www.raspberryconnect.com/images/Autohotspot/autohotspot-95-4/autohotspot.txt`
-	* `sudo vi /etc/systemd/system/autohotspot.service`
-		Copy content from autohotspot.txt, change wifidev to wifi device if required
-	* `sudo systemctl enable autohotspot.service`
-	* `sudo vi /usr/bin/autohotspot`
-	* `sudo chmod +x /usr/bin/autohotsppot`
-	
+* Rename autohotspot.txt to autohotspot
+* `sudo cp autohotspot vi /usr/bin`
+* `sudo chmod +x /usr/bin/autohotspot`
 ### Test autohotspot
 * `sudo vi /etc/wpa_supplicant/wpa_supplicant.conf`
 	* Add ‘off’ to SSID making it invalid
