@@ -18,8 +18,8 @@ This is not reversible so should be the final step before production.
 
 '''
 __author__ = 'Rod Thomas <rod.thomas@talktalk.net>'
-__date__ = '10 Nov 2021'
-__version__ = '0.7.3'
+__date__ = '27 Jun 2022'
+__version__ = '0.7.4'
 
 # Library imports
 import pygame
@@ -114,6 +114,8 @@ def welcome(screen : pygame.surface) -> ProgramState:
     
     screen: The surface to display the welcome page on
     """
+    global welcome_image, logo_rect
+    
     screen_rect = screen.get_rect()
     welcome_image = get_image(WELCOME_IMAGE, "images/AgustaBell47.jpg", False)
     img_rect = welcome_image.get_rect(center = screen_rect.center)
@@ -135,10 +137,11 @@ def welcome(screen : pygame.surface) -> ProgramState:
     screen.blit(t, text_rect)
     
     small_font = get_font(SMALL_FONT)
-    now = datetime.now()
-    t = small_font.render("%s" % (now.strftime("%d/%b/%Y %H:%M:%S")), False, defs.WHITE)
-    text_rect = t.get_rect(bottomleft = screen_rect.bottomright).move(-120, -10)
-    screen.blit(t, text_rect)
+    # Needs RTC
+    # now = datetime.now()
+    # t = small_font.render("%s" % (now.strftime("%d/%b/%Y %H:%M:%S")), False, defs.WHITE)
+    # text_rect = t.get_rect(bottomleft = screen_rect.bottomright).move(-120, -10)
+    # screen.blit(t, text_rect)
     t = small_font.render("v %s" % (__version__), False, defs.WHITE)
     text_rect = t.get_rect(bottomleft = screen_rect.bottomleft).move(10, -10)
     screen.blit(t, text_rect)
@@ -193,6 +196,8 @@ def menu(screen : pygame.surface, items : list, repaint : bool = True) -> Progra
     items: a list of item labels and states to select from
     repaint: repaint the welcome background when true
     """
+    global welcome_image, logo_rect
+    
     border_thickness = 10
     spacing = 100
     margin = 100
@@ -230,7 +235,8 @@ def menu(screen : pygame.surface, items : list, repaint : bool = True) -> Progra
             left = int(col * cell_width - gap / 2)
             width = gap
             repaint_rects.append(pygame.Rect(left, int(gap / 2), width, h - gap))
-        welcome_image = get_image(WELCOME_IMAGE)
+        repaint_rects.append(logo_rect)
+
         for r in repaint_rects:
             screen.blit(welcome_image, r, r)
      
