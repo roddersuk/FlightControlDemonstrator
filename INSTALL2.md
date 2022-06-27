@@ -67,7 +67,7 @@ Run the configuration utility as root:
 * Download the application
 	`git clone http://github.com/roddersuk/FlightControlDemonstrator`
 * `sudo vi /etc/rc.local` and add the following line just before exit 0
-	`sudo /home/pi/FlightControlDemonstrator/src/scripts/startup&`
+	`sudo /home/bell/FlightControlDemonstrator/src/scripts/startup&`
 	
 ## Make a backup copy of the SD card
 * Shut down the Pi and put the SD card in your Linux machine
@@ -75,7 +75,10 @@ Run the configuration utility as root:
 	* `wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh`
 	* `chmod +x pishrink.sh`
 	* `sudo mv pishrink.sh /usr/local/bin`
+	* May need to install pigz too
 * Make acopy of the image
 	* `sudo fdisk -l` to find the SD card device name
 	* `sudo dd if=/dev/mmcblk0 of=FCD.img bs=4M` to get an image file (use the right device name
 	* `sudo pishrink.sh -aZ FCD.img`
+	
+	
