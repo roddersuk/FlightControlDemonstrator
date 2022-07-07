@@ -50,12 +50,12 @@ def main() :
     pygame.mouse.set_visible(False)
     im = InputManager.get_instance()
     state = ProgramState.WELCOME
-    
+
     clock = pygame.time.Clock()
     try:
         while True :
             try:
-                repaint = True
+                #repaint = True
                 if state == ProgramState.WELCOME:
                     repaint = False
                     state = welcome(screen)
@@ -70,9 +70,11 @@ def main() :
                                   [_("How Do the Flight Controls Work on a Helicopter?"), ProgramState.DESCRIPTIONS],
                                   [_("Try Out the Flight Controls and See How They Affect the Rotor Blades"), ProgramState.CONTROLS],
                                   [_("Simple Flight Simulator"), ProgramState.BASIC_SIM],
-                                  [_("Advanced Flight Simulator"), ProgramState.ADVANCED_SIM],
+                                  # [_("Advanced Flight Simulator"), ProgramState.ADVANCED_SIM],
                                   [_("About"), ProgramState.ABOUT]],
                                  repaint)
+                    if state != ProgramState.MENU:
+                        repaint = True
                 elif state == ProgramState.DESCRIPTIONS :
                     state = describe(screen)
                 elif state == ProgramState.CONTROLS :
@@ -138,10 +140,10 @@ def welcome(screen : pygame.surface) -> ProgramState:
     
     small_font = get_font(SMALL_FONT)
     # Needs RTC
-    # now = datetime.now()
-    # t = small_font.render("%s" % (now.strftime("%d/%b/%Y %H:%M:%S")), False, defs.WHITE)
-    # text_rect = t.get_rect(bottomleft = screen_rect.bottomright).move(-120, -10)
-    # screen.blit(t, text_rect)
+    now = datetime.now()
+    t = small_font.render("%s" % (now.strftime("%d/%b/%Y %H:%M:%S")), False, defs.WHITE)
+    text_rect = t.get_rect(bottomleft = screen_rect.bottomright).move(-120, -10)
+    screen.blit(t, text_rect)
     t = small_font.render("v %s" % (__version__), False, defs.WHITE)
     text_rect = t.get_rect(bottomleft = screen_rect.bottomleft).move(10, -10)
     screen.blit(t, text_rect)
@@ -161,7 +163,7 @@ def about(screen: pygame.surface):
         ["<c>" + _("Flight Controls Demonstrator") + " v " + __version__,
          "<c>" + _("Developed by Rod Thomas"),
          "<c>" + _("for The Helicopter Museum"),
-         "<c>" + _("2021")], 
+         "<c>" + _("2022")], 
         get_font(INFO_FONT), 
         defs.ABOUT_FOREGROUND_COLOUR,
         defs.ABOUT_BACKGROUND_COLOUR) 
@@ -227,6 +229,7 @@ def menu(screen : pygame.surface, items : list, repaint : bool = True) -> Progra
     if repaint:
         # Need to repaint background image after returning from selection
         repaint_rects = []
+        # Rects of spaces between menu items
         for row in range(no_rows+1):
             top = int(row * cell_height - gap / 2)
             height = gap
@@ -235,6 +238,10 @@ def menu(screen : pygame.surface, items : list, repaint : bool = True) -> Progra
             left = int(col * cell_width - gap / 2)
             width = gap
             repaint_rects.append(pygame.Rect(left, int(gap / 2), width, h - gap))
+        if len(items) % 2 == 1:
+            cx = int((cells_per_row - 1) * cell_width  + spacing / 2)
+            cy = int((no_rows - 1) * cell_height + spacing / 2)
+            repaint_rects.append(pygame.Rect(cx, cy, cell_width, cell_height))
         repaint_rects.append(logo_rect)
 
         for r in repaint_rects:

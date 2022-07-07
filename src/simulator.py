@@ -243,7 +243,8 @@ def simulator(screen : pygame.surface, basic : bool = False) -> ProgramState:
             if (altitude > 1.0):
                 # We're off the ground
                 helicopter_state = _("Flying")
-                heading = (heading + HEADING_INC * flight_controls.anti_torque) % 360 + heading_change
+                # N.B. Max tail rotor angle causes anti-clock rotation
+                heading = (heading - HEADING_INC * flight_controls.anti_torque) % 360 + heading_change
                 xmax = X_MAX / pad_scale
                 ymax = Y_MAX / pad_scale
                 x = max(-xmax, min(xmax, x - (forward_thrust * math.sin(math.radians(heading)) 
