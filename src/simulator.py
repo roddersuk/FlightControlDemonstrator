@@ -7,7 +7,7 @@ import time
 import math
 
 import defs
-from defs import ProgramState
+from defs import ProgramState, CRASH_LANDING_SPEED, HEANY_LANDING_SPEED, LANDING_PAD_OFFSET
 from graphics import Altimeter, ArtificialHorizon, Helicopter, DirectionIndicator, LandingPad, HelicopterState, Landscape, write
 from mmi import InputManager, get_font, INFO_FONT, render_text_list,\
     wrap_text
@@ -161,7 +161,8 @@ def simulator(screen : pygame.surface, basic : bool = False) -> ProgramState:
     dash_rect = screen.get_rect()
     dash_rect.top = main_rect.height
     dash_rect.height = defs.DASH_HEIGHT
-    dash_text = _('Centre the cyclic, lower the collective and then press the button to start the engine.\n'
+    dash_text = _('Centre the cyclic stick, lower the collective and put your feet on the anti-torque pedals.\n'
+                  'Then press the button to start the engine.\n'
                   'Try to take off, fly around and land back on the pad.')
     max_fps = 40
     if basic:
@@ -243,8 +244,7 @@ def simulator(screen : pygame.surface, basic : bool = False) -> ProgramState:
             if (altitude > 1.0):
                 # We're off the ground
                 helicopter_state = _("Flying")
-                # N.B. Max tail rotor angle causes anti-clock rotation
-                heading = (heading - HEADING_INC * flight_controls.anti_torque) % 360 + heading_change
+                heading = (heading + HEADING_INC * flight_controls.anti_torque) % 360 + heading_change
                 xmax = X_MAX / pad_scale
                 ymax = Y_MAX / pad_scale
                 x = max(-xmax, min(xmax, x - (forward_thrust * math.sin(math.radians(heading)) 
@@ -261,16 +261,16 @@ def simulator(screen : pygame.surface, basic : bool = False) -> ProgramState:
                 helicopter.set_state(HelicopterState.WINDING_DOWN)
                 flight_controls.reset()
                 pitch = roll = lift = thrust = 0.0
-                if vertical_speed > 250.0:
+                if vertical_speed > CRASH_LANDING_SPEED:
                     msg = _("Oh dear, I'm afraid you crash landed!")
-                elif (pad_offset.length() > 90) :
+                elif (pad_offset.length() > LANDING_PAD_OFFSET) :
                     helicopter_state = _("Missed the landing pad")
-                    if vertical_speed < 100.0:
+                    if vertical_speed < HEANY_LANDING_SPEED:
                         msg = _('You landed OK but you missed the landing pad')
                     else:
                         msg = _("That was a heavy landing,\nand you missed the landing pad!")
                 else:
-                    if vertical_speed < 100.0:
+                    if vertical_speed < HEANY_LANDING_SPEED:
                         msg = _('Well done!\nYou landed safely back on the landing pad')
                     else:
                         msg = _("You landed back on the pad\nbut it was quite a heavy landing")

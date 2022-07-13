@@ -179,7 +179,7 @@ class InterfaceBoard(threading.Thread):
         return value
 
     def run(self):
-        """Daemon process for the thread to monitor joystick movements.
+        """Daemon process for the thread to monitor potentiometer movements.
         
         Only movements greater than the specified TOLERANCE are used to generate JOYAXISMOTION events
         """

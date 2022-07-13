@@ -56,6 +56,8 @@ config.read("FCD.ini")
 # main
 SCREEN_WIDTH = config['main'].getint('screen_width', fallback = 1280)
 SCREEN_HEIGHT = config['main'].getint('screen_height', fallback = 1024)
+FLAG_HIGHLIGHT_WIDTH = config['main'].getint('flag_highlight_width', fallback = 4)
+SCROLL_INCREMENT = config['main'].getint('scroll_increment', fallback = 10)
 
 #colour
 WHITE = '[255, 255, 255]'
@@ -144,11 +146,14 @@ ALTITUDE_MAX = config['simulator'].getfloat('altitude_limit', fallback = 4000.0)
 PITCH_MAX = config['simulator'].getfloat('pitch_limit', fallback = 30.0)
 ROLL_MAX = config['simulator'].getfloat('roll_limit', fallback = 30.0)
 THRUST_FACTOR = config['simulator'].getfloat('thrust_factor', fallback = 100.0)
-TAKEOFF_LIFT = config['simulator'].getfloat('takeoff_lift', fallback = 10.0)
+TAKEOFF_LIFT = config['simulator'].getfloat('takeoff_lift', fallback = 20.0)
 WINDMILL_THRUST = config['simulator'].getfloat('windmill_thrust', fallback = 5.0)
 BANKING_FACTOR = config['simulator'].getfloat('banking_factor', fallback = 1000.0)
 DASH_HEIGHT = config['simulator'].getint('dashboard_height', fallback = 240)
 HELI_ROTATION_PERCENT = config['simulator'].getfloat('helicopter_rotation_percent', fallback = 5.0)
+CRASH_LANDING_SPEED = config['main'].getfloat('crash_landing_speed', fallback = 250.0)
+HEANY_LANDING_SPEED = config['main'].getfloat('heavy_landing_speed', fallback = 100.0)
+LANDING_PAD_OFFSET = config['main'].getint('landing_pad_offset', fallback = 100)
 
 def reset_calibration():
     global XPOT_MIN, YPOT_MIN, ZPOT_MIN, RPOT_MIN, XPOT_MAX, YPOT_MAX, ZPOT_MAX, RPOT_MAX

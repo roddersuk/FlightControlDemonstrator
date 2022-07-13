@@ -1,7 +1,7 @@
 <c>Los pedales ANTI-TORQUE
 
-La rotación de las palas del rotor principal generaría una fuerza igual y opuesta que haría que el cuerpo del helicóptero gire en la dirección opuesta si esto no se contrarrestara.
+La rotación de las palas del rotor principal genera una fuerza igual y opuesta (tercera ley de movimiento de Newton) que hace que el cuerpo del helicóptero gire en la dirección opuesta si no se contrarresta.
 
-En la mayoría de los helicópteros, esta fuerza (o TORQUE) es opuesta por el rotor de cola.
+En la mayoría de los helicópteros, esta fuerza (o TORQUE) se opone al empuje generado por el rotor de cola.
 
 Los pedales ANTI-TORQUE alteran la inclinación de las palas del rotor de cola, lo que permite controlar esta fuerza opuesta, lo que permite que el helicóptero gire hacia la izquierda o hacia la derecha.

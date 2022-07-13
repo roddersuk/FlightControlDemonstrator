@@ -36,8 +36,8 @@ def calibrate(screen : pygame.surface) -> defs.ProgramState:
     fgd = defs.CALIBRATE_FOREGROUND_COLOUR
     rect = screen.get_rect() #.inflate(-40, -40)
     graphics.round_rect(screen, rect, 0, bgd)
-    device.write(screen, "Joystick calibration", "", 0, bgd, fgd)
-    device.write(screen, "====================", "", 1, bgd, fgd)
+    device.write(screen, "Potentiometer calibration", "", 0, bgd, fgd)
+    device.write(screen, "=========================", "", 1, bgd, fgd)
     
     has_gpio = im._fc.has_gpio()
     limits = [

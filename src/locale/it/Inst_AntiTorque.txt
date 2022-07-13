@@ -1,7 +1,7 @@
 <c>I pedali ANTI-TORQUE
 
-La rotazione delle pale del rotore principale genererebbe una forza uguale e opposta facendo ruotare il corpo dell'elicottero nella direzione opposta se questo non fosse neutralizzato.
+La rotazione delle pale del rotore principale genera una forza uguale e contraria (3a legge del moto di Newton) che fa ruotare il corpo dell'elicottero nella direzione opposta se questa non viene contrastata.
 
-Nella maggior parte degli elicotteri, questa forza (o COPPIA) è opposta dal rotore di coda.
+Nella maggior parte degli elicotteri, questa forza (o TORQUE), è contrastata dalla spinta generata dal rotore di coda.
 
 I pedali ANTI-TORQUE alterano il passo delle pale del rotore di coda consentendo di controllare questa forza opposta, consentendo all'elicottero di ruotare a sinistra oa destra.

@@ -3,7 +3,7 @@
 Created on 14 Oct 2018
 Simple flight controls demonstrator based on the Agusta Bell 47 rig
 Designed to run on a Raspberry Pi with a custom interface board providing A-D conversion for the flight controls
-as well as a joystick buttons used to select options, a seat switch to detect user presence and a MOSFET to switch
+as well as a cyclic stick buttons used to select options, a seat switch to detect user presence and a MOSFET to switch
 on an optional motor to drive the rotor.
 Requires Python3, Pygame and gpiozero
 
@@ -18,8 +18,8 @@ This is not reversible so should be the final step before production.
 
 '''
 __author__ = 'Rod Thomas <rod.thomas@talktalk.net>'
-__date__ = '27 Jun 2022'
-__version__ = '0.7.4'
+__date__ = '8 Jul 2022'
+__version__ = '0.8.0'
 
 # Library imports
 import pygame
@@ -50,6 +50,7 @@ def main() :
     pygame.mouse.set_visible(False)
     im = InputManager.get_instance()
     state = ProgramState.WELCOME
+    menuReset()
 
     clock = pygame.time.Clock()
     try:
@@ -93,6 +94,7 @@ def main() :
                 if pygame.mixer.get_init():
                     pygame.mixer.stop()
                 im.reset()
+                menuReset()
                 state = ProgramState.WELCOME
             clock.tick(10)
                 
@@ -161,7 +163,7 @@ def about(screen: pygame.surface):
     """
     text = render_text_list(
         ["<c>" + _("Flight Controls Demonstrator") + " v " + __version__,
-         "<c>" + _("Developed by Rod Thomas"),
+         "<c>" + _("Developed by Rod Thomas (volunteer)"),
          "<c>" + _("for The Helicopter Museum"),
          "<c>" + _("2022")], 
         get_font(INFO_FONT), 
@@ -220,7 +222,7 @@ def menu(screen : pygame.surface, items : list, repaint : bool = True) -> Progra
         cells[1].append(cell_height * (j + 1))
     
     # Get selected item based on current control position
-    result = choose_cell(cells, menu.selected_column, menu.selected_row)
+    result = choose_cell(cells, len(items), menu.selected_column, menu.selected_row)
     menu.selected_row = result[2]
     menu.selected_column = result[1]
     selected = result[0]
@@ -285,8 +287,10 @@ def menu(screen : pygame.surface, items : list, repaint : bool = True) -> Progra
     else :
         pygame.display.update()
         return ProgramState.MENU
-menu.selected_row = 0
-menu.selected_column = 0
+    
+def menuReset():
+    menu.selected_row = 0
+    menu.selected_column = 0
     
 def describe(screen : pygame.surface) -> ProgramState :
     """Display pages of description about the flight controls

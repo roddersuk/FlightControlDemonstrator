@@ -2,7 +2,7 @@
 Man-Machine Interface module for the Bell 47 demonstrator rig
 '''
 import pygame
-import logging
+#import logging
 import time
 
 import defs
@@ -269,13 +269,13 @@ class InputManager(object) :
         return got_input
     
     def _get_joystick_input(self, event: pygame.event) -> bool:
-        """Get input from the joystick events.
+        """Get input from the control events.
         
             When the seat button is released a timer is started which will reset the app unless the switch is pressed again
             before the timeout
         
-        event (event): the joystick event
-        return: bool indicating that input was obtained from the buttons or the cyclic joystick which are used to control the app
+        event (event): the control event
+        return: bool indicating that input was obtained from the buttons or the cyclic stick which are used to control the app
         """
         got_input = False
         if event.type == pygame.JOYBUTTONDOWN:
@@ -341,10 +341,12 @@ class InputManager(object) :
             self.reset_inactive_timer()
         return arrow
 
-def choose_cell(cells, cellx, celly = 0) -> ():
-    """Choose a cell position using keyboard or joystick.
+def choose_cell(cells, ncells, cellx = 0, celly = 0) -> ():
+    """Choose a cell position using keyboard or cyclic stick trim button.
     
-    cells: list of x,y pairs giving upper coordinates of the cell (only used for joystick input)
+    cells[0]: list of x coordinates of the cell columns
+    cells[1]: list of y coordinates of the cell rows
+    ncells: number of cells
     cellx: the x coordinate of the initial cell
     celly: the y coordinate for the initial cell
     
@@ -352,11 +354,11 @@ def choose_cell(cells, cellx, celly = 0) -> ():
         selected (bool): user pressed the selection button for this cell
         cellx: the x coordinate of the current cell
         celly: the y coordinate of the current cell
-        x: the joystick x value
-        y: the joystick y value
     """
     im = InputManager.get_instance()
     selected = False
+    nrows = len(cells[1])
+    ncols = len(cells[0])
     for event in im.get_events():
         if ((event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE) 
             or (event.type == pygame.JOYBUTTONDOWN and event.button == defs.BTN_SELECT)):
@@ -367,13 +369,13 @@ def choose_cell(cells, cellx, celly = 0) -> ():
             if arrow != None:
                 if arrow == pygame.K_UP and celly > 0:
                     celly -= 1
-                elif arrow == pygame.K_DOWN and celly < len(cells[1]) - 1:
+                elif arrow == pygame.K_DOWN and celly < (nrows - 1) and ((celly + 1) * ncols + cellx) < ncells:
                     celly += 1
                 elif arrow == pygame.K_LEFT and cellx > 0:
                     cellx -= 1
-                elif arrow == pygame.K_RIGHT and cellx < len(cells[0]) - 1:
+                elif arrow == pygame.K_RIGHT and cellx < ncols - 1 and (celly * ncols + (cellx +1)) < ncells :
                     cellx += 1
-    return selected, cellx, celly#, x, y
+    return selected, cellx, celly
         
 def ask(screen: pygame.surface, question: str, fgd: () = defs.WHITE, bgd: () = defs.BLACK, font = None) -> bool:
     """Prompt the user for a Yes/No answer

@@ -8,7 +8,9 @@ from pathlib import Path
 
 import mmi
 import graphics
-from defs import HIGHLIGHT_COLOUR, BTN_SELECT
+from defs import HIGHLIGHT_COLOUR, FLAG_HIGHLIGHT_WIDTH, SCROLL_INCREMENT, BTN_SELECT
+from pygame.time import delay
+from time import sleep
 
 languages = {}
 current_language = 'en'
@@ -57,7 +59,7 @@ def select_language(screen : pygame.surface) -> bool:
     y = 50
     cells = [[], []]
     flag_rects = []
-    # Ensure English is in the middle so its the default with a centred joystick
+    # Ensure English is in the middle so its the default
     f = list(flags.keys())
     fi = [i for i in range(len(f))]
     mid = int(len(f) / 2)
@@ -81,13 +83,13 @@ def select_language(screen : pygame.surface) -> bool:
         cells[0].append(x - FLAG_GAP / 2)
         if flag == current_language:
             cellx = i
-            pygame.draw.rect(screen, HIGHLIGHT_COLOUR, flag_rects[cellx], 2)
+            pygame.draw.rect(screen, HIGHLIGHT_COLOUR, flag_rects[cellx], FLAG_HIGHLIGHT_WIDTH)
     # Let the user choose
-    result = mmi.choose_cell(cells, cellx)
+    result = mmi.choose_cell(cells, len(sorted_flags), cellx)
     if result[1] != cellx:
         cellx = result[1]
         set_language(sorted_flags[cellx])
-        pygame.draw.rect(screen, HIGHLIGHT_COLOUR, flag_rects[cellx], 2)
+        pygame.draw.rect(screen, HIGHLIGHT_COLOUR, flag_rects[cellx], FLAG_HIGHLIGHT_WIDTH)
     return result[0]
 
 def read_file(name : str) -> str :
@@ -131,7 +133,6 @@ def scroll_text(screen : pygame.surface,
     rects = []
     finished = False
     while not finished :
-        first_pass = True
         # Get the page text and render it onto a surface, wrapped if necessary
         text = read_file(filenames[page])
         lines = mmi.wrap_text(text, font, rect.width)
@@ -142,17 +143,13 @@ def scroll_text(screen : pygame.surface,
         else :
             miny = maxy
         y_offset = maxy
-        y_inc = 10
+        y_inc = SCROLL_INCREMENT
         prev_y_offset = y_offset - 1
         change_page = False
         while not finished and (label or not change_page):
-            if first_pass:                  
-                if bgd != None:
-                    screen.fill(bgd, rectmain)
-                rects = []
-            else:
-                for r in rects:
-                    screen.fill(bgd, r)
+            if bgd != None:
+                screen.fill(bgd, rectmain)
+            rects = [rectmain]
             if not label:
                 # Get input, changing page in the x direction and scrolling in the y direction
                 for event in im.get_events():
@@ -173,19 +170,15 @@ def scroll_text(screen : pygame.surface,
                         change_page = page != prev_page
                         if change_page or y_offset != prev_y_offset:
                             break
-                # Display arrows if there is more to come in the x or y direction
-                if y_offset != prev_y_offset:                    
+                if y_offset != prev_y_offset:
+                    # Display arrows if there is more to come in the x or y direction
                     rects += arrows.blit(screen, rectmain, page > 0, page < len(filenames) - 1, y_offset < maxy, y_offset > miny)
             # Show the scrolled text if it has moved
-            if y_offset != prev_y_offset:                    
+            if y_offset != prev_y_offset:  
                 screen.set_clip(rect)
                 rects.append(screen.blit(surf, [rect.left, y_offset]))      
                 screen.set_clip()
-                if first_pass:
-                    first_pass = False
-                    pygame.display.update()
-                else:
-                    pygame.display.update(rects)
+                pygame.display.update(rects)
             if label:
                 finished = True
             prev_y_offset = y_offset

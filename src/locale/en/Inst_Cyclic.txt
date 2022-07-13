@@ -1,11 +1,11 @@
 <c>The CYCLIC PITCH control
 
-The functioning of the joystick is somewhat more complicated.
+The functioning of the cyclic stick (joystick) is somewhat more complicated.
 
-Moving the joystick in a particular direction causes the pitch of the main rotor blades to be reduced when they pass by that position and to be increased when they have turned by 180 degrees.
+Moving the cyclic stick in a particular direction causes the pitch of the main rotor blades to be reduced when they pass by that position and to be increased when they have turned by 180 degrees.
 
 This results in the helicopter tilting in the direction of movement because of the reduced lift in that direction (and increased lift in the opposite direction).
 
-When the helicopter tilts, the thrust (lift) of the main rotor is directed away from joystick position causing the aircraft to move in the same direction as the joystick.
+When the helicopter tilts, the thrust (lift) of the main rotor is directed away from cyclic stick position causing the aircraft to move in the same direction as the cyclic stick.
 
 The control is known as the CYCLIC PITCH control because the pitch of the rotor blades is constantly changing as they rotate in a cyclic manner.

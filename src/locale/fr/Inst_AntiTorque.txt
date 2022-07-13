@@ -1,7 +1,7 @@
 <c>Les pédales ANTI-TORQUE
 
-La rotation des pales du rotor principal générerait une force égale et opposée entraînant la rotation du corps de l'hélicoptère dans le sens opposé si cela n'était pas contrecarré.
+La rotation des pales du rotor principal génère une force égale et opposée (3e loi du mouvement de Newton) provoquant la rotation du corps de l'hélicoptère dans la direction opposée si cela n'était pas contrecarré.
 
-Dans la plupart des hélicoptères, cette force (ou couple) est contrée par le rotor de queue.
+Dans la plupart des hélicoptères, cette force (ou COUPLE) s'oppose à la poussée générée par le rotor de queue.
 
 Les pédales ANTI-TORQUE modifient le pas des pales du rotor de queue, ce qui permet de contrôler cette force opposée et de permettre à l'hélicoptère de tourner à gauche ou à droite.
