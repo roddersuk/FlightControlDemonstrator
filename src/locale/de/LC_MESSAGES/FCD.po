@@ -5,115 +5,111 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2021-11-01 08:33+0000\n"
-"PO-Revision-Date: 2021-11-01 08:34+0000\n"
+"POT-Creation-Date: 2022-07-13 06:18+0100\n"
+"PO-Revision-Date: 2022-07-13 06:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: pygettext.py 1.5\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 3.0.1\n"
 
-#: FCD.py:48 FCD.py:158
+#: FCD.py:48 FCD.py:165
 msgid "Flight Controls Demonstrator"
 msgstr "Flugsteuerungen Demonstrator"
 
-#: FCD.py:69
+#: FCD.py:70
 msgid "Introduction"
 msgstr "Anleitung"
 
-#: FCD.py:70
+#: FCD.py:71
 msgid "How Do the Flight Controls Work on a Helicopter?"
 msgstr "Wie funktionieren die Flugsteuerungen an einem Hubschrauber?"
 
-#: FCD.py:71
+#: FCD.py:72
 msgid "Try Out the Flight Controls and See How They Affect the Rotor Blades"
 msgstr ""
 "Testen Sie die Flugsteuerungen und sehen Sie, wie sie die Rotorblätter "
 "beeinflussen"
 
-#: FCD.py:72
+#: FCD.py:73
 msgid "Simple Flight Simulator"
 msgstr "Einfacher Flugsimulator"
 
-#: FCD.py:73
-msgid "Advanced Flight Simulator"
-msgstr "Erweiterter Flugsimulator"
-
-#: FCD.py:74
+#: FCD.py:75
 msgid "About"
 msgstr "Über"
 
-#: FCD.py:127
+#: FCD.py:133
 msgid "Welcome to the"
 msgstr "Willkommen bei"
 
-#: FCD.py:130
+#: FCD.py:136
 msgid "Flight Controls"
 msgstr "Kontrollen"
 
-#: FCD.py:133
+#: FCD.py:139
 msgid "Demonstrator"
 msgstr "Flugdemonstrator"
 
-#: FCD.py:159
-msgid "Developed by Rod Thomas"
-msgstr "Entwickelt von Rod Thomas"
+#: FCD.py:166
+msgid "Developed by Rod Thomas (volunteer)"
+msgstr "Entwickelt von Rod Thomas (Freiwilliger)"
 
-#: FCD.py:160
+#: FCD.py:167
 msgid "for The Helicopter Museum"
 msgstr "für das Hubschrauber-Museum"
 
-#: FCD.py:161
-msgid "2021"
-msgstr "2021"
+#: FCD.py:168
+msgid "2022"
+msgstr ""
 
-#: FCD.py:301
+#: FCD.py:318
 msgid "Do you want the blades to rotate?"
 msgstr "Möchten Sie, dass sich die Klingen drehen?"
 
-#: FCD.py:305
+#: FCD.py:322
 msgid "COLLECTIVE"
 msgstr "KOLLEKTIV"
 
-#: FCD.py:306
+#: FCD.py:323
 msgid "CYCLIC LONG"
 msgstr "ZYKLISHE LÄNG"
 
-#: FCD.py:307
+#: FCD.py:324
 msgid "CYCLIC LAT"
 msgstr "ZYKLISHE SEIT"
 
-#: FCD.py:308
+#: FCD.py:325
 msgid "RUDDER PEDAL"
 msgstr "RUDERPEDAL"
 
-#: FCD.py:337
+#: FCD.py:354
 msgid "Watch how the blade angle changes as you move the controls."
 msgstr ""
 "Beobachten Sie, wie sich der Blattwinkel ändert, während Sie die "
 "Steuerelemente verschieben."
 
-#: FCD.py:344
+#: FCD.py:361
 msgid "The movement is exaggerated for the purposes of illustration."
 msgstr "Die Bewegung ist zu Illustrationszwecken übertrieben dargestellt."
 
-#: i18n.py:103
+#: i18n.py:105
 msgid "Missing file"
 msgstr "Fehlende Datei"
 
-#: i18n.py:103
+#: i18n.py:105
 msgid "for language"
 msgstr "für die Sprache"
 
-#: mmi.py:371
+#: mmi.py:394
 msgid "Yes"
 msgstr "Ja"
 
-#: mmi.py:374
+#: mmi.py:397
 msgid "No"
 msgstr "Nein"
 
@@ -123,16 +119,18 @@ msgstr "Auf dem Boden"
 
 #: simulator.py:164
 msgid ""
-"Centre the cyclic, lower the collective and then press the button to start "
-"the engine.\n"
+"Centre the cyclic stick, lower the collective and put your feet on the anti-"
+"torque pedals.\n"
+"Then press the button to start the engine.\n"
 "Try to take off, fly around and land back on the pad."
 msgstr ""
-"Den Zyklus zentrieren, das Kollektiv absenken und dann die Taste drücken, um "
-"den Motor zu starten.\n"
+"Zentrieren Sie den zyklischen Steuerknüppel, senken Sie das Kollektiv und "
+"stellen Sie Ihre Füße auf die Anti-Drehmoment-Pedale.\n"
+"Drücken Sie dann die Taste, um den Motor zu starten.\n"
 "Versuchen Sie zu starten, fliegen Sie herum und landen Sie wieder auf dem "
 "Pad."
 
-#: simulator.py:172
+#: simulator.py:173
 msgid ""
 "\n"
 "The direction arrow at the top of the screen indicates where to find the "
@@ -142,35 +140,35 @@ msgstr ""
 "Der Richtungspfeil oben auf dem Bildschirm zeigt an, wo sich der Landeplatz "
 "befindet."
 
-#: simulator.py:208
+#: simulator.py:211
 msgid "Starting up"
 msgstr "Inbetriebnahme"
 
-#: simulator.py:216
+#: simulator.py:219
 msgid "Running"
 msgstr "Laufen"
 
-#: simulator.py:243
+#: simulator.py:246
 msgid "Flying"
 msgstr "Fliegend"
 
-#: simulator.py:256
+#: simulator.py:259
 msgid "Landed OK"
 msgstr "OK gelandet"
 
-#: simulator.py:262
+#: simulator.py:265
 msgid "Oh dear, I'm afraid you crash landed!"
 msgstr "Oh mein Lieber, ich fürchte, dein Absturz ist gelandet!"
 
-#: simulator.py:264
+#: simulator.py:267
 msgid "Missed the landing pad"
 msgstr "Verpasste den Landeplatz"
 
-#: simulator.py:266
+#: simulator.py:269
 msgid "You landed OK but you missed the landing pad"
 msgstr "Sie sind gut gelandet, haben aber den Landeplatz verpasst"
 
-#: simulator.py:268
+#: simulator.py:271
 msgid ""
 "That was a heavy landing,\n"
 "and you missed the landing pad!"
@@ -178,7 +176,7 @@ msgstr ""
 "Das war eine schwere Landung.\n"
 "und du hast den Landeplatz verpasst!"
 
-#: simulator.py:271
+#: simulator.py:274
 msgid ""
 "Well done!\n"
 "You landed safely back on the landing pad"
@@ -186,13 +184,19 @@ msgstr ""
 "Gut gemacht!\n"
 "Sie sind sicher auf dem Landeplatz gelandet"
 
-#: simulator.py:273
+#: simulator.py:276
 msgid ""
 "You landed back on the pad\n"
 "but it was quite a heavy landing"
 msgstr ""
 "Du bist wieder auf dem Landeplatz gelandet\n"
 "aber es war eine ziemlich schwere Landung"
+
+#~ msgid "Advanced Flight Simulator"
+#~ msgstr "Erweiterter Flugsimulator"
+
+#~ msgid "2021"
+#~ msgstr "2021"
 
 #~ msgid "2020"
 #~ msgstr "2020"
